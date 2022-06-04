@@ -53,16 +53,13 @@ class ST_Joint_Att(nn.Layer):
 
 
 class Part_Att(nn.Layer):
-    '''
-    没有完全解决问题
-    '''
     def __init__(self, channel, parts, reduct_ratio, bias, **kwargs):
         super(Part_Att, self).__init__()
 
         self.parts = parts
         joints = self.get_corr_joints()
         joints = self.create_parameter(
-            shape=joints.shape, dtype=str(joints.numpy().dtype), default_initializer=paddle.nn.initializer.Assign(joints), stop_gradient=True
+            shape=joints.shape, dtype=str(joints.numpy().dtype), default_initializer=paddle.nn.initializer.Assign(joints)
         )
         self.add_parameter('joints', joints)
         
