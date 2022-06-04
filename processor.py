@@ -88,9 +88,24 @@ class Proccessor(Initializer):
     def start(self):
         start_time = time()
         if self.args.evaluate:
-            if self.args.debug:
+             if self.args.debug:
                 logging.warning('Warning: Using debug setting now!')
                 logging.info('')
+
+            # Loading Evaluating Model
+            logging.info('Loading evaluating model ...')
+            
+            checkpoint = paddle.load(self.model_name)
+
+            if checkpoint:
+                self.model.set_state_dict(checkpoint['model'])
+            logging.info('Successful!')
+            logging.info('')
+            
+            # Evaluating
+            logging.info('Starting evaluating ...')
+            self.eval()
+            logging.info('Finish evaluating!')
 
         else:
             start_epoch = 0
