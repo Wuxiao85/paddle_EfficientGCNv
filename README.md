@@ -20,7 +20,7 @@
 * PaddlePaddle: 2.2.2
 使用模块安装
 
-    pip install requirements.txt
+    pip install -r requirements.txt
     
 #### 快速开始
 ###### 1. 下载数据集
