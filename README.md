@@ -7,7 +7,7 @@
 
 [官方源码](https://gitee.com/yfsong0709/EfficientGCNv1)
 ## 2. 数据集和复现精度
-#### 2. 1NTU-RGB-D60
+#### 2.1 NTU-RGB-D60
 下载地址: https://drive.google.com/open?id=1CUZnBtYwifVXS21yVg62T-vrPVayso5H
 #### 2.2 复现精度（待调整）
 |      | x-sub | x-view |
