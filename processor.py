@@ -151,7 +151,6 @@ class Proccessor(Initializer):
         checkpoint = paddle.load(self.model_name)
         if checkpoint:
             self.model.set_state_dict(checkpoint['model'])
-        logging.info('data shape:' + self.data_shape)            
         self.data_shape.insert(0, self.eval_batch_size)
         self.model.eval()
         new_net = paddle.jit.to_static(self.model, input_spec=[paddle.static.InputSpec(shape=self.data_shape, dtype='float32')])
