@@ -2,7 +2,9 @@
 #### 简介
 [EfficientGCN: Constructing Stronger and Faster Baselines for Skeleton-based Action Recognition](https://paperswithcode.com/paper/constructing-stronger-and-faster-baselines)
 一文提出了基于骨架行为识别的baseline，在论文中，将基于骨架识别的网络分为input branch和 main stream两部分。Input branch 用于提取骨架数据的多模态特征，提取的特征通过concat等操作完成特征融合后将输入main stream中预测动作分类。
+
 ![EfficientGCN](./images/model.PNG)
+
 [官方源码](https://gitee.com/yfsong0709/EfficientGCNv1)
 #### 数据集和复现精度
 ###### NTU-RGB-D60
@@ -59,7 +61,9 @@
 训练模型将保留在temp文件夹下。
 训练log: [xview.log](https://github.com/Wuxiao85/paddle_EfficientGCNv/blob/main/workdir/2002_EfficientGCN-B0_ntu-xview/2022-06-05%2000-51-10/log.txt), [xsub.log](https://github.com/Wuxiao85/paddle_EfficientGCNv/blob/main/workdir/2001_EfficientGCN-B0_ntu-xsub/2022-06-05%2000-52-01/log.txt)
 
+
 部分训练log：
+
 
 x-view：
     
@@ -79,6 +83,7 @@ x-view：
     [ 2022-06-05 14:15:30,491 ] 
     [ 2022-06-05 14:15:30,491 ] Finish training!
     [ 2022-06-05 14:15:30,491 ] 
+
 x-sub:
     
     [ 2022-06-05 15:07:25,503 ] Evaluating for epoch 70/70 ...
@@ -103,6 +108,7 @@ x-sub:
     # export CUDA_VISIBLE_DEVICES=0 // 用到的gpu编号
     # python main.py -c 2002 // 在x-view数据集上训练
 
+
 x-view 预测结果:
     
     INFO 2022-06-05 14:44:24,114 initializer.py:24]
@@ -115,6 +121,7 @@ x-view 预测结果:
     INFO 2022-06-05 14:47:10,345 processor.py:81] Evaluating time: 166.18s, Speed: 113.90 sequnces/(second*GPU)
     INFO 2022-06-05 14:47:10,346 processor.py:84]
     INFO 2022-06-05 14:47:10,346 processor.py:109] Finish evaluating!
+
 
 x-sub 预测结果:
 
