@@ -18,6 +18,7 @@
 **基本环境**
 * Python: 3.7
 * PaddlePaddle: 2.2.2
+
 **模块安装**
 
     pip install -r requirements.txt
