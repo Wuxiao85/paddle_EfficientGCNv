@@ -1,0 +1,457 @@
+[ 2022-06-05 00:52:01,227 ] Saving folder path: ./workdir/2001_EfficientGCN-B0_ntu-xsub/2022-06-05 00-52-01
+[ 2022-06-05 00:52:01,227 ] Saving model name: 2001_EfficientGCN-B0_ntu-xsub
+[ 2022-06-05 00:52:01,242 ] Dataset: ntu-xsub
+[ 2022-06-05 00:52:01,242 ] Batch size: train-16, eval-16
+[ 2022-06-05 00:52:01,242 ] Data shape (branch, channel, frame, joint, person): [3, 6, 288, 25, 2]
+[ 2022-06-05 00:52:01,242 ] Number of action classes: 60
+[ 2022-06-05 00:55:00,303 ] Model: EfficientGCN-B0 {'stem_channel': 64, 'block_args': [[48, 1, 0.5], [24, 1, 0.5], [64, 2, 1], [128, 2, 1]], 'fusion_stage': 2, 'act_type': 'swish', 'att_type': 'stja', 'layer_type': 'SG', 'drop_prob': 0.25, 'kernel_size': [5, 2], 'scale_args': [1.2, 1.35], 'expand_ratio': 0, 'reduct_ratio': 2, 'bias': True, 'edge': True}
+[ 2022-06-05 00:55:00,305 ] LR_Scheduler: cosine {'max_epoch': 70, 'warm_up': 10}
+[ 2022-06-05 00:55:00,306 ] Optimizer: Momentum {'learning_rate': <paddle.optimizer.lr.LambdaDecay object at 0x7f52bc0e2550>, 'momentum': 0.9, 'use_nesterov': True, 'weight_decay': 0.0001}
+[ 2022-06-05 00:55:00,306 ] Loss function: CrossEntropyLoss
+[ 2022-06-05 00:55:00,307 ] Successful!
+[ 2022-06-05 00:55:00,307 ] 
+[ 2022-06-05 00:55:00,307 ] Starting training ...
+[ 2022-06-05 01:06:39,865 ] Epoch: 1/70, Training accuracy: 8346/40080(20.82%), Training time: 699.56s
+[ 2022-06-05 01:06:39,865 ] 
+[ 2022-06-05 01:06:39,866 ] Saving model for epoch 1/70 ...
+[ 2022-06-05 01:06:39,895 ] Best top-1 accuracy: 0.00%, Total time: 00d-00h-11m-39s
+[ 2022-06-05 01:06:39,895 ] 
+[ 2022-06-05 01:18:20,584 ] Epoch: 2/70, Training accuracy: 21052/40080(52.52%), Training time: 700.69s
+[ 2022-06-05 01:18:20,584 ] 
+[ 2022-06-05 01:18:20,585 ] Saving model for epoch 2/70 ...
+[ 2022-06-05 01:18:20,611 ] Best top-1 accuracy: 0.00%, Total time: 00d-00h-23m-20s
+[ 2022-06-05 01:18:20,611 ] 
+[ 2022-06-05 01:29:56,239 ] Epoch: 3/70, Training accuracy: 26010/40080(64.90%), Training time: 695.63s
+[ 2022-06-05 01:29:56,239 ] 
+[ 2022-06-05 01:29:56,240 ] Saving model for epoch 3/70 ...
+[ 2022-06-05 01:29:56,266 ] Best top-1 accuracy: 0.00%, Total time: 00d-00h-34m-55s
+[ 2022-06-05 01:29:56,266 ] 
+[ 2022-06-05 01:41:32,818 ] Epoch: 4/70, Training accuracy: 28387/40080(70.83%), Training time: 696.55s
+[ 2022-06-05 01:41:32,819 ] 
+[ 2022-06-05 01:41:32,819 ] Saving model for epoch 4/70 ...
+[ 2022-06-05 01:41:32,846 ] Best top-1 accuracy: 0.00%, Total time: 00d-00h-46m-32s
+[ 2022-06-05 01:41:32,846 ] 
+[ 2022-06-05 01:53:13,124 ] Epoch: 5/70, Training accuracy: 29652/40080(73.98%), Training time: 700.28s
+[ 2022-06-05 01:53:13,125 ] 
+[ 2022-06-05 01:53:13,126 ] Evaluating for epoch 5/70 ...
+[ 2022-06-05 01:55:09,862 ] Top-1 accuracy: 12423/16480(75.38%), Top-5 accuracy: 15751/16480(95.58%), Mean loss:0.8110
+[ 2022-06-05 01:55:09,863 ] Evaluating time: 116.74s, Speed: 141.17 sequnces/(second*GPU)
+[ 2022-06-05 01:55:09,863 ] 
+[ 2022-06-05 01:55:09,863 ] Saving model for epoch 5/70 ...
+[ 2022-06-05 01:55:09,888 ] Best top-1 accuracy: 75.38%, Total time: 00d-01h-00m-09s
+[ 2022-06-05 01:55:09,888 ] 
+[ 2022-06-05 02:06:48,875 ] Epoch: 6/70, Training accuracy: 30571/40080(76.27%), Training time: 698.99s
+[ 2022-06-05 02:06:48,875 ] 
+[ 2022-06-05 02:06:48,876 ] Saving model for epoch 6/70 ...
+[ 2022-06-05 02:06:48,901 ] Best top-1 accuracy: 75.38%, Total time: 00d-01h-11m-48s
+[ 2022-06-05 02:06:48,902 ] 
+[ 2022-06-05 02:18:26,910 ] Epoch: 7/70, Training accuracy: 31073/40080(77.53%), Training time: 698.01s
+[ 2022-06-05 02:18:26,910 ] 
+[ 2022-06-05 02:18:26,911 ] Saving model for epoch 7/70 ...
+[ 2022-06-05 02:18:26,937 ] Best top-1 accuracy: 75.38%, Total time: 00d-01h-23m-26s
+[ 2022-06-05 02:18:26,937 ] 
+[ 2022-06-05 02:30:05,917 ] Epoch: 8/70, Training accuracy: 31459/40080(78.49%), Training time: 698.98s
+[ 2022-06-05 02:30:05,917 ] 
+[ 2022-06-05 02:30:05,918 ] Saving model for epoch 8/70 ...
+[ 2022-06-05 02:30:05,944 ] Best top-1 accuracy: 75.38%, Total time: 00d-01h-35m-05s
+[ 2022-06-05 02:30:05,944 ] 
+[ 2022-06-05 02:41:46,023 ] Epoch: 9/70, Training accuracy: 31563/40080(78.75%), Training time: 700.08s
+[ 2022-06-05 02:41:46,024 ] 
+[ 2022-06-05 02:41:46,025 ] Saving model for epoch 9/70 ...
+[ 2022-06-05 02:41:46,050 ] Best top-1 accuracy: 75.38%, Total time: 00d-01h-46m-45s
+[ 2022-06-05 02:41:46,050 ] 
+[ 2022-06-05 02:53:26,185 ] Epoch: 10/70, Training accuracy: 31605/40080(78.85%), Training time: 700.13s
+[ 2022-06-05 02:53:26,185 ] 
+[ 2022-06-05 02:53:26,186 ] Evaluating for epoch 10/70 ...
+[ 2022-06-05 02:55:20,627 ] Top-1 accuracy: 12304/16480(74.66%), Top-5 accuracy: 15730/16480(95.45%), Mean loss:0.8338
+[ 2022-06-05 02:55:20,627 ] Evaluating time: 114.44s, Speed: 144.01 sequnces/(second*GPU)
+[ 2022-06-05 02:55:20,627 ] 
+[ 2022-06-05 02:55:20,627 ] Saving model for epoch 10/70 ...
+[ 2022-06-05 02:55:20,655 ] Best top-1 accuracy: 75.38%, Total time: 00d-02h-00m-20s
+[ 2022-06-05 02:55:20,655 ] 
+[ 2022-06-05 03:06:59,558 ] Epoch: 11/70, Training accuracy: 31785/40080(79.30%), Training time: 698.90s
+[ 2022-06-05 03:06:59,558 ] 
+[ 2022-06-05 03:06:59,558 ] Saving model for epoch 11/70 ...
+[ 2022-06-05 03:06:59,583 ] Best top-1 accuracy: 75.38%, Total time: 00d-02h-11m-59s
+[ 2022-06-05 03:06:59,584 ] 
+[ 2022-06-05 03:18:37,989 ] Epoch: 12/70, Training accuracy: 32119/40080(80.14%), Training time: 698.40s
+[ 2022-06-05 03:18:37,989 ] 
+[ 2022-06-05 03:18:37,990 ] Saving model for epoch 12/70 ...
+[ 2022-06-05 03:18:38,015 ] Best top-1 accuracy: 75.38%, Total time: 00d-02h-23m-37s
+[ 2022-06-05 03:18:38,016 ] 
+[ 2022-06-05 03:30:12,533 ] Epoch: 13/70, Training accuracy: 32356/40080(80.73%), Training time: 694.52s
+[ 2022-06-05 03:30:12,534 ] 
+[ 2022-06-05 03:30:12,534 ] Saving model for epoch 13/70 ...
+[ 2022-06-05 03:30:12,560 ] Best top-1 accuracy: 75.38%, Total time: 00d-02h-35m-12s
+[ 2022-06-05 03:30:12,560 ] 
+[ 2022-06-05 03:41:42,625 ] Epoch: 14/70, Training accuracy: 32386/40080(80.80%), Training time: 690.06s
+[ 2022-06-05 03:41:42,625 ] 
+[ 2022-06-05 03:41:42,626 ] Saving model for epoch 14/70 ...
+[ 2022-06-05 03:41:42,652 ] Best top-1 accuracy: 75.38%, Total time: 00d-02h-46m-42s
+[ 2022-06-05 03:41:42,652 ] 
+[ 2022-06-05 03:53:18,506 ] Epoch: 15/70, Training accuracy: 32627/40080(81.40%), Training time: 695.85s
+[ 2022-06-05 03:53:18,506 ] 
+[ 2022-06-05 03:53:18,507 ] Evaluating for epoch 15/70 ...
+[ 2022-06-05 03:55:18,490 ] Top-1 accuracy: 7333/16480(44.50%), Top-5 accuracy: 12687/16480(76.98%), Mean loss:2.4435
+[ 2022-06-05 03:55:18,490 ] Evaluating time: 119.98s, Speed: 137.36 sequnces/(second*GPU)
+[ 2022-06-05 03:55:18,491 ] 
+[ 2022-06-05 03:55:18,491 ] Saving model for epoch 15/70 ...
+[ 2022-06-05 03:55:18,519 ] Best top-1 accuracy: 75.38%, Total time: 00d-03h-00m-18s
+[ 2022-06-05 03:55:18,519 ] 
+[ 2022-06-05 04:06:43,530 ] Epoch: 16/70, Training accuracy: 32734/40080(81.67%), Training time: 685.01s
+[ 2022-06-05 04:06:43,530 ] 
+[ 2022-06-05 04:06:43,531 ] Saving model for epoch 16/70 ...
+[ 2022-06-05 04:06:43,556 ] Best top-1 accuracy: 75.38%, Total time: 00d-03h-11m-43s
+[ 2022-06-05 04:06:43,557 ] 
+[ 2022-06-05 04:18:22,647 ] Epoch: 17/70, Training accuracy: 32888/40080(82.06%), Training time: 699.09s
+[ 2022-06-05 04:18:22,648 ] 
+[ 2022-06-05 04:18:22,648 ] Saving model for epoch 17/70 ...
+[ 2022-06-05 04:18:22,676 ] Best top-1 accuracy: 75.38%, Total time: 00d-03h-23m-22s
+[ 2022-06-05 04:18:22,676 ] 
+[ 2022-06-05 04:30:01,116 ] Epoch: 18/70, Training accuracy: 32956/40080(82.23%), Training time: 698.44s
+[ 2022-06-05 04:30:01,116 ] 
+[ 2022-06-05 04:30:01,117 ] Saving model for epoch 18/70 ...
+[ 2022-06-05 04:30:01,142 ] Best top-1 accuracy: 75.38%, Total time: 00d-03h-35m-00s
+[ 2022-06-05 04:30:01,142 ] 
+[ 2022-06-05 04:41:36,903 ] Epoch: 19/70, Training accuracy: 33184/40080(82.79%), Training time: 695.76s
+[ 2022-06-05 04:41:36,903 ] 
+[ 2022-06-05 04:41:36,903 ] Saving model for epoch 19/70 ...
+[ 2022-06-05 04:41:36,928 ] Best top-1 accuracy: 75.38%, Total time: 00d-03h-46m-36s
+[ 2022-06-05 04:41:36,928 ] 
+[ 2022-06-05 04:53:15,864 ] Epoch: 20/70, Training accuracy: 33256/40080(82.97%), Training time: 698.94s
+[ 2022-06-05 04:53:15,864 ] 
+[ 2022-06-05 04:53:15,865 ] Evaluating for epoch 20/70 ...
+[ 2022-06-05 04:55:14,165 ] Top-1 accuracy: 7898/16480(47.92%), Top-5 accuracy: 13191/16480(80.04%), Mean loss:2.2587
+[ 2022-06-05 04:55:14,166 ] Evaluating time: 118.30s, Speed: 139.31 sequnces/(second*GPU)
+[ 2022-06-05 04:55:14,166 ] 
+[ 2022-06-05 04:55:14,166 ] Saving model for epoch 20/70 ...
+[ 2022-06-05 04:55:14,191 ] Best top-1 accuracy: 75.38%, Total time: 00d-04h-00m-13s
+[ 2022-06-05 04:55:14,191 ] 
+[ 2022-06-05 05:06:52,673 ] Epoch: 21/70, Training accuracy: 33334/40080(83.17%), Training time: 698.48s
+[ 2022-06-05 05:06:52,674 ] 
+[ 2022-06-05 05:06:52,674 ] Saving model for epoch 21/70 ...
+[ 2022-06-05 05:06:52,699 ] Best top-1 accuracy: 75.38%, Total time: 00d-04h-11m-52s
+[ 2022-06-05 05:06:52,699 ] 
+[ 2022-06-05 05:18:30,208 ] Epoch: 22/70, Training accuracy: 33591/40080(83.81%), Training time: 697.51s
+[ 2022-06-05 05:18:30,208 ] 
+[ 2022-06-05 05:18:30,208 ] Saving model for epoch 22/70 ...
+[ 2022-06-05 05:18:30,232 ] Best top-1 accuracy: 75.38%, Total time: 00d-04h-23m-29s
+[ 2022-06-05 05:18:30,232 ] 
+[ 2022-06-05 05:30:04,484 ] Epoch: 23/70, Training accuracy: 33646/40080(83.95%), Training time: 694.25s
+[ 2022-06-05 05:30:04,484 ] 
+[ 2022-06-05 05:30:04,485 ] Saving model for epoch 23/70 ...
+[ 2022-06-05 05:30:04,509 ] Best top-1 accuracy: 75.38%, Total time: 00d-04h-35m-04s
+[ 2022-06-05 05:30:04,510 ] 
+[ 2022-06-05 05:41:40,521 ] Epoch: 24/70, Training accuracy: 33791/40080(84.31%), Training time: 696.01s
+[ 2022-06-05 05:41:40,521 ] 
+[ 2022-06-05 05:41:40,522 ] Saving model for epoch 24/70 ...
+[ 2022-06-05 05:41:40,549 ] Best top-1 accuracy: 75.38%, Total time: 00d-04h-46m-40s
+[ 2022-06-05 05:41:40,549 ] 
+[ 2022-06-05 05:53:18,738 ] Epoch: 25/70, Training accuracy: 33810/40080(84.36%), Training time: 698.19s
+[ 2022-06-05 05:53:18,738 ] 
+[ 2022-06-05 05:53:18,739 ] Evaluating for epoch 25/70 ...
+[ 2022-06-05 05:55:14,161 ] Top-1 accuracy: 8340/16480(50.61%), Top-5 accuracy: 13918/16480(84.45%), Mean loss:1.9069
+[ 2022-06-05 05:55:14,161 ] Evaluating time: 115.42s, Speed: 142.78 sequnces/(second*GPU)
+[ 2022-06-05 05:55:14,161 ] 
+[ 2022-06-05 05:55:14,161 ] Saving model for epoch 25/70 ...
+[ 2022-06-05 05:55:14,188 ] Best top-1 accuracy: 75.38%, Total time: 00d-05h-00m-13s
+[ 2022-06-05 05:55:14,189 ] 
+[ 2022-06-05 06:06:52,182 ] Epoch: 26/70, Training accuracy: 34011/40080(84.86%), Training time: 697.99s
+[ 2022-06-05 06:06:52,182 ] 
+[ 2022-06-05 06:06:52,183 ] Saving model for epoch 26/70 ...
+[ 2022-06-05 06:06:52,208 ] Best top-1 accuracy: 75.38%, Total time: 00d-05h-11m-51s
+[ 2022-06-05 06:06:52,208 ] 
+[ 2022-06-05 06:18:26,347 ] Epoch: 27/70, Training accuracy: 33921/40080(84.63%), Training time: 694.14s
+[ 2022-06-05 06:18:26,348 ] 
+[ 2022-06-05 06:18:26,348 ] Saving model for epoch 27/70 ...
+[ 2022-06-05 06:18:26,374 ] Best top-1 accuracy: 75.38%, Total time: 00d-05h-23m-26s
+[ 2022-06-05 06:18:26,375 ] 
+[ 2022-06-05 06:30:03,366 ] Epoch: 28/70, Training accuracy: 34129/40080(85.15%), Training time: 696.99s
+[ 2022-06-05 06:30:03,366 ] 
+[ 2022-06-05 06:30:03,367 ] Saving model for epoch 28/70 ...
+[ 2022-06-05 06:30:03,393 ] Best top-1 accuracy: 75.38%, Total time: 00d-05h-35m-03s
+[ 2022-06-05 06:30:03,393 ] 
+[ 2022-06-05 06:41:38,046 ] Epoch: 29/70, Training accuracy: 34266/40080(85.49%), Training time: 694.65s
+[ 2022-06-05 06:41:38,046 ] 
+[ 2022-06-05 06:41:38,046 ] Saving model for epoch 29/70 ...
+[ 2022-06-05 06:41:38,071 ] Best top-1 accuracy: 75.38%, Total time: 00d-05h-46m-37s
+[ 2022-06-05 06:41:38,072 ] 
+[ 2022-06-05 06:53:15,227 ] Epoch: 30/70, Training accuracy: 34433/40080(85.91%), Training time: 697.15s
+[ 2022-06-05 06:53:15,227 ] 
+[ 2022-06-05 06:53:15,228 ] Evaluating for epoch 30/70 ...
+[ 2022-06-05 06:55:14,874 ] Top-1 accuracy: 6179/16480(37.49%), Top-5 accuracy: 10981/16480(66.63%), Mean loss:3.1940
+[ 2022-06-05 06:55:14,874 ] Evaluating time: 119.64s, Speed: 137.74 sequnces/(second*GPU)
+[ 2022-06-05 06:55:14,874 ] 
+[ 2022-06-05 06:55:14,874 ] Saving model for epoch 30/70 ...
+[ 2022-06-05 06:55:14,899 ] Best top-1 accuracy: 75.38%, Total time: 00d-06h-00m-14s
+[ 2022-06-05 06:55:14,899 ] 
+[ 2022-06-05 07:06:49,624 ] Epoch: 31/70, Training accuracy: 34462/40080(85.98%), Training time: 694.72s
+[ 2022-06-05 07:06:49,624 ] 
+[ 2022-06-05 07:06:49,625 ] Saving model for epoch 31/70 ...
+[ 2022-06-05 07:06:49,650 ] Best top-1 accuracy: 75.38%, Total time: 00d-06h-11m-49s
+[ 2022-06-05 07:06:49,651 ] 
+[ 2022-06-05 07:18:25,659 ] Epoch: 32/70, Training accuracy: 34554/40080(86.21%), Training time: 696.01s
+[ 2022-06-05 07:18:25,660 ] 
+[ 2022-06-05 07:18:25,660 ] Saving model for epoch 32/70 ...
+[ 2022-06-05 07:18:25,685 ] Best top-1 accuracy: 75.38%, Total time: 00d-06h-23m-25s
+[ 2022-06-05 07:18:25,685 ] 
+[ 2022-06-05 07:29:59,313 ] Epoch: 33/70, Training accuracy: 34728/40080(86.65%), Training time: 693.63s
+[ 2022-06-05 07:29:59,314 ] 
+[ 2022-06-05 07:29:59,314 ] Saving model for epoch 33/70 ...
+[ 2022-06-05 07:29:59,339 ] Best top-1 accuracy: 75.38%, Total time: 00d-06h-34m-59s
+[ 2022-06-05 07:29:59,339 ] 
+[ 2022-06-05 07:41:38,459 ] Epoch: 34/70, Training accuracy: 34839/40080(86.92%), Training time: 699.12s
+[ 2022-06-05 07:41:38,459 ] 
+[ 2022-06-05 07:41:38,460 ] Saving model for epoch 34/70 ...
+[ 2022-06-05 07:41:38,485 ] Best top-1 accuracy: 75.38%, Total time: 00d-06h-46m-38s
+[ 2022-06-05 07:41:38,485 ] 
+[ 2022-06-05 07:53:17,074 ] Epoch: 35/70, Training accuracy: 34913/40080(87.11%), Training time: 698.59s
+[ 2022-06-05 07:53:17,074 ] 
+[ 2022-06-05 07:53:17,075 ] Evaluating for epoch 35/70 ...
+[ 2022-06-05 07:55:09,385 ] Top-1 accuracy: 13707/16480(83.17%), Top-5 accuracy: 16074/16480(97.54%), Mean loss:0.5468
+[ 2022-06-05 07:55:09,385 ] Evaluating time: 112.31s, Speed: 146.74 sequnces/(second*GPU)
+[ 2022-06-05 07:55:09,385 ] 
+[ 2022-06-05 07:55:09,385 ] Saving model for epoch 35/70 ...
+[ 2022-06-05 07:55:09,411 ] Best top-1 accuracy: 83.17%, Total time: 00d-07h-00m-09s
+[ 2022-06-05 07:55:09,411 ] 
+[ 2022-06-05 08:06:44,416 ] Epoch: 36/70, Training accuracy: 35123/40080(87.63%), Training time: 695.00s
+[ 2022-06-05 08:06:44,416 ] 
+[ 2022-06-05 08:06:44,417 ] Saving model for epoch 36/70 ...
+[ 2022-06-05 08:06:44,442 ] Best top-1 accuracy: 83.17%, Total time: 00d-07h-11m-44s
+[ 2022-06-05 08:06:44,443 ] 
+[ 2022-06-05 08:18:19,119 ] Epoch: 37/70, Training accuracy: 35097/40080(87.57%), Training time: 694.68s
+[ 2022-06-05 08:18:19,120 ] 
+[ 2022-06-05 08:18:19,120 ] Saving model for epoch 37/70 ...
+[ 2022-06-05 08:18:19,145 ] Best top-1 accuracy: 83.17%, Total time: 00d-07h-23m-18s
+[ 2022-06-05 08:18:19,145 ] 
+[ 2022-06-05 08:29:57,650 ] Epoch: 38/70, Training accuracy: 35321/40080(88.13%), Training time: 698.50s
+[ 2022-06-05 08:29:57,651 ] 
+[ 2022-06-05 08:29:57,651 ] Saving model for epoch 38/70 ...
+[ 2022-06-05 08:29:57,677 ] Best top-1 accuracy: 83.17%, Total time: 00d-07h-34m-57s
+[ 2022-06-05 08:29:57,677 ] 
+[ 2022-06-05 08:41:32,529 ] Epoch: 39/70, Training accuracy: 35385/40080(88.29%), Training time: 694.85s
+[ 2022-06-05 08:41:32,530 ] 
+[ 2022-06-05 08:41:32,530 ] Saving model for epoch 39/70 ...
+[ 2022-06-05 08:41:32,556 ] Best top-1 accuracy: 83.17%, Total time: 00d-07h-46m-32s
+[ 2022-06-05 08:41:32,556 ] 
+[ 2022-06-05 08:52:52,861 ] Epoch: 40/70, Training accuracy: 35582/40080(88.78%), Training time: 680.30s
+[ 2022-06-05 08:52:52,861 ] 
+[ 2022-06-05 08:52:52,862 ] Evaluating for epoch 40/70 ...
+[ 2022-06-05 08:54:44,261 ] Top-1 accuracy: 13899/16480(84.34%), Top-5 accuracy: 16117/16480(97.80%), Mean loss:0.5043
+[ 2022-06-05 08:54:44,262 ] Evaluating time: 111.40s, Speed: 147.94 sequnces/(second*GPU)
+[ 2022-06-05 08:54:44,262 ] 
+[ 2022-06-05 08:54:44,262 ] Saving model for epoch 40/70 ...
+[ 2022-06-05 08:54:44,290 ] Best top-1 accuracy: 84.34%, Total time: 00d-07h-59m-43s
+[ 2022-06-05 08:54:44,290 ] 
+[ 2022-06-05 09:06:18,745 ] Epoch: 41/70, Training accuracy: 35744/40080(89.18%), Training time: 694.45s
+[ 2022-06-05 09:06:18,745 ] 
+[ 2022-06-05 09:06:18,746 ] Saving model for epoch 41/70 ...
+[ 2022-06-05 09:06:18,775 ] Best top-1 accuracy: 84.34%, Total time: 00d-08h-11m-18s
+[ 2022-06-05 09:06:18,776 ] 
+[ 2022-06-05 09:17:58,557 ] Epoch: 42/70, Training accuracy: 35858/40080(89.47%), Training time: 699.78s
+[ 2022-06-05 09:17:58,557 ] 
+[ 2022-06-05 09:17:58,558 ] Saving model for epoch 42/70 ...
+[ 2022-06-05 09:17:58,585 ] Best top-1 accuracy: 84.34%, Total time: 00d-08h-22m-58s
+[ 2022-06-05 09:17:58,585 ] 
+[ 2022-06-05 09:29:33,134 ] Epoch: 43/70, Training accuracy: 36038/40080(89.92%), Training time: 694.55s
+[ 2022-06-05 09:29:33,134 ] 
+[ 2022-06-05 09:29:33,135 ] Saving model for epoch 43/70 ...
+[ 2022-06-05 09:29:33,161 ] Best top-1 accuracy: 84.34%, Total time: 00d-08h-34m-32s
+[ 2022-06-05 09:29:33,162 ] 
+[ 2022-06-05 09:41:08,189 ] Epoch: 44/70, Training accuracy: 36048/40080(89.94%), Training time: 695.03s
+[ 2022-06-05 09:41:08,189 ] 
+[ 2022-06-05 09:41:08,190 ] Saving model for epoch 44/70 ...
+[ 2022-06-05 09:41:08,217 ] Best top-1 accuracy: 84.34%, Total time: 00d-08h-46m-07s
+[ 2022-06-05 09:41:08,217 ] 
+[ 2022-06-05 09:52:43,097 ] Epoch: 45/70, Training accuracy: 36454/40080(90.95%), Training time: 694.88s
+[ 2022-06-05 09:52:43,097 ] 
+[ 2022-06-05 09:52:43,098 ] Evaluating for epoch 45/70 ...
+[ 2022-06-05 09:54:34,995 ] Top-1 accuracy: 13647/16480(82.81%), Top-5 accuracy: 15982/16480(96.98%), Mean loss:0.5821
+[ 2022-06-05 09:54:34,995 ] Evaluating time: 111.89s, Speed: 147.28 sequnces/(second*GPU)
+[ 2022-06-05 09:54:34,995 ] 
+[ 2022-06-05 09:54:34,995 ] Saving model for epoch 45/70 ...
+[ 2022-06-05 09:54:35,021 ] Best top-1 accuracy: 84.34%, Total time: 00d-08h-59m-34s
+[ 2022-06-05 09:54:35,021 ] 
+[ 2022-06-05 10:06:11,361 ] Epoch: 46/70, Training accuracy: 36449/40080(90.94%), Training time: 696.34s
+[ 2022-06-05 10:06:11,361 ] 
+[ 2022-06-05 10:06:11,362 ] Saving model for epoch 46/70 ...
+[ 2022-06-05 10:06:11,388 ] Best top-1 accuracy: 84.34%, Total time: 00d-09h-11m-11s
+[ 2022-06-05 10:06:11,388 ] 
+[ 2022-06-05 10:17:44,056 ] Epoch: 47/70, Training accuracy: 36597/40080(91.31%), Training time: 692.67s
+[ 2022-06-05 10:17:44,056 ] 
+[ 2022-06-05 10:17:44,057 ] Saving model for epoch 47/70 ...
+[ 2022-06-05 10:17:44,082 ] Best top-1 accuracy: 84.34%, Total time: 00d-09h-22m-43s
+[ 2022-06-05 10:17:44,082 ] 
+[ 2022-06-05 10:29:23,524 ] Epoch: 48/70, Training accuracy: 36799/40080(91.81%), Training time: 699.44s
+[ 2022-06-05 10:29:23,525 ] 
+[ 2022-06-05 10:29:23,525 ] Saving model for epoch 48/70 ...
+[ 2022-06-05 10:29:23,551 ] Best top-1 accuracy: 84.34%, Total time: 00d-09h-34m-23s
+[ 2022-06-05 10:29:23,552 ] 
+[ 2022-06-05 10:40:58,436 ] Epoch: 49/70, Training accuracy: 36949/40080(92.19%), Training time: 694.88s
+[ 2022-06-05 10:40:58,437 ] 
+[ 2022-06-05 10:40:58,437 ] Saving model for epoch 49/70 ...
+[ 2022-06-05 10:40:58,464 ] Best top-1 accuracy: 84.34%, Total time: 00d-09h-45m-58s
+[ 2022-06-05 10:40:58,464 ] 
+[ 2022-06-05 10:52:35,162 ] Epoch: 50/70, Training accuracy: 37165/40080(92.73%), Training time: 696.70s
+[ 2022-06-05 10:52:35,163 ] 
+[ 2022-06-05 10:52:35,163 ] Evaluating for epoch 50/70 ...
+[ 2022-06-05 10:54:27,200 ] Top-1 accuracy: 13496/16480(81.89%), Top-5 accuracy: 15667/16480(95.07%), Mean loss:0.6729
+[ 2022-06-05 10:54:27,200 ] Evaluating time: 112.04s, Speed: 147.10 sequnces/(second*GPU)
+[ 2022-06-05 10:54:27,200 ] 
+[ 2022-06-05 10:54:27,200 ] Saving model for epoch 50/70 ...
+[ 2022-06-05 10:54:27,227 ] Best top-1 accuracy: 84.34%, Total time: 00d-09h-59m-26s
+[ 2022-06-05 10:54:27,227 ] 
+[ 2022-06-05 11:06:05,810 ] Epoch: 51/70, Training accuracy: 37411/40080(93.34%), Training time: 698.58s
+[ 2022-06-05 11:06:05,811 ] 
+[ 2022-06-05 11:06:05,811 ] Saving model for epoch 51/70 ...
+[ 2022-06-05 11:06:05,837 ] Best top-1 accuracy: 84.34%, Total time: 00d-10h-11m-05s
+[ 2022-06-05 11:06:05,837 ] 
+[ 2022-06-05 11:17:46,528 ] Epoch: 52/70, Training accuracy: 37616/40080(93.85%), Training time: 700.69s
+[ 2022-06-05 11:17:46,528 ] 
+[ 2022-06-05 11:17:46,529 ] Saving model for epoch 52/70 ...
+[ 2022-06-05 11:17:46,555 ] Best top-1 accuracy: 84.34%, Total time: 00d-10h-22m-46s
+[ 2022-06-05 11:17:46,555 ] 
+[ 2022-06-05 11:29:25,279 ] Epoch: 53/70, Training accuracy: 37755/40080(94.20%), Training time: 698.72s
+[ 2022-06-05 11:29:25,279 ] 
+[ 2022-06-05 11:29:25,280 ] Saving model for epoch 53/70 ...
+[ 2022-06-05 11:29:25,306 ] Best top-1 accuracy: 84.34%, Total time: 00d-10h-34m-24s
+[ 2022-06-05 11:29:25,307 ] 
+[ 2022-06-05 11:41:04,675 ] Epoch: 54/70, Training accuracy: 37944/40080(94.67%), Training time: 699.37s
+[ 2022-06-05 11:41:04,675 ] 
+[ 2022-06-05 11:41:04,676 ] Saving model for epoch 54/70 ...
+[ 2022-06-05 11:41:04,703 ] Best top-1 accuracy: 84.34%, Total time: 00d-10h-46m-04s
+[ 2022-06-05 11:41:04,703 ] 
+[ 2022-06-05 11:52:36,258 ] Epoch: 55/70, Training accuracy: 38197/40080(95.30%), Training time: 691.55s
+[ 2022-06-05 11:52:36,259 ] 
+[ 2022-06-05 11:52:36,260 ] Evaluating for epoch 55/70 ...
+[ 2022-06-05 11:54:33,426 ] Top-1 accuracy: 14362/16480(87.15%), Top-5 accuracy: 16139/16480(97.93%), Mean loss:0.4446
+[ 2022-06-05 11:54:33,426 ] Evaluating time: 117.16s, Speed: 140.66 sequnces/(second*GPU)
+[ 2022-06-05 11:54:33,426 ] 
+[ 2022-06-05 11:54:33,426 ] Saving model for epoch 55/70 ...
+[ 2022-06-05 11:54:33,452 ] Best top-1 accuracy: 87.15%, Total time: 00d-10h-59m-33s
+[ 2022-06-05 11:54:33,452 ] 
+[ 2022-06-05 12:05:59,469 ] Epoch: 56/70, Training accuracy: 38396/40080(95.80%), Training time: 686.02s
+[ 2022-06-05 12:05:59,470 ] 
+[ 2022-06-05 12:05:59,471 ] Saving model for epoch 56/70 ...
+[ 2022-06-05 12:05:59,498 ] Best top-1 accuracy: 87.15%, Total time: 00d-11h-10m-59s
+[ 2022-06-05 12:05:59,498 ] 
+[ 2022-06-05 12:17:21,469 ] Epoch: 57/70, Training accuracy: 38610/40080(96.33%), Training time: 681.97s
+[ 2022-06-05 12:17:21,469 ] 
+[ 2022-06-05 12:17:21,471 ] Saving model for epoch 57/70 ...
+[ 2022-06-05 12:17:21,500 ] Best top-1 accuracy: 87.15%, Total time: 00d-11h-22m-21s
+[ 2022-06-05 12:17:21,500 ] 
+[ 2022-06-05 12:28:46,554 ] Epoch: 58/70, Training accuracy: 38864/40080(96.97%), Training time: 685.05s
+[ 2022-06-05 12:28:46,555 ] 
+[ 2022-06-05 12:28:46,556 ] Saving model for epoch 58/70 ...
+[ 2022-06-05 12:28:46,589 ] Best top-1 accuracy: 87.15%, Total time: 00d-11h-33m-46s
+[ 2022-06-05 12:28:46,589 ] 
+[ 2022-06-05 12:40:20,983 ] Epoch: 59/70, Training accuracy: 39065/40080(97.47%), Training time: 694.39s
+[ 2022-06-05 12:40:20,984 ] 
+[ 2022-06-05 12:40:20,985 ] Saving model for epoch 59/70 ...
+[ 2022-06-05 12:40:21,012 ] Best top-1 accuracy: 87.15%, Total time: 00d-11h-45m-20s
+[ 2022-06-05 12:40:21,012 ] 
+[ 2022-06-05 12:52:01,297 ] Epoch: 60/70, Training accuracy: 39243/40080(97.91%), Training time: 700.28s
+[ 2022-06-05 12:52:01,297 ] 
+[ 2022-06-05 12:52:01,298 ] Evaluating for epoch 60/70 ...
+[ 2022-06-05 12:53:54,942 ] Top-1 accuracy: 14613/16480(88.67%), Top-5 accuracy: 16201/16480(98.31%), Mean loss:0.4022
+[ 2022-06-05 12:53:54,942 ] Evaluating time: 113.64s, Speed: 145.02 sequnces/(second*GPU)
+[ 2022-06-05 12:53:54,942 ] 
+[ 2022-06-05 12:53:54,942 ] Saving model for epoch 60/70 ...
+[ 2022-06-05 12:53:54,969 ] Best top-1 accuracy: 88.67%, Total time: 00d-11h-58m-54s
+[ 2022-06-05 12:53:54,969 ] 
+[ 2022-06-05 13:05:35,303 ] Epoch: 61/70, Training accuracy: 39427/40080(98.37%), Training time: 700.33s
+[ 2022-06-05 13:05:35,303 ] 
+[ 2022-06-05 13:05:35,304 ] Evaluating for epoch 61/70 ...
+[ 2022-06-05 13:07:29,566 ] Top-1 accuracy: 14615/16480(88.68%), Top-5 accuracy: 16201/16480(98.31%), Mean loss:0.4067
+[ 2022-06-05 13:07:29,566 ] Evaluating time: 114.26s, Speed: 144.23 sequnces/(second*GPU)
+[ 2022-06-05 13:07:29,566 ] 
+[ 2022-06-05 13:07:29,566 ] Saving model for epoch 61/70 ...
+[ 2022-06-05 13:07:29,593 ] Best top-1 accuracy: 88.68%, Total time: 00d-12h-12m-29s
+[ 2022-06-05 13:07:29,593 ] 
+[ 2022-06-05 13:19:05,259 ] Epoch: 62/70, Training accuracy: 39545/40080(98.67%), Training time: 695.67s
+[ 2022-06-05 13:19:05,259 ] 
+[ 2022-06-05 13:19:05,260 ] Evaluating for epoch 62/70 ...
+[ 2022-06-05 13:20:59,377 ] Top-1 accuracy: 14675/16480(89.05%), Top-5 accuracy: 16208/16480(98.35%), Mean loss:0.3984
+[ 2022-06-05 13:20:59,377 ] Evaluating time: 114.11s, Speed: 144.42 sequnces/(second*GPU)
+[ 2022-06-05 13:20:59,377 ] 
+[ 2022-06-05 13:20:59,377 ] Saving model for epoch 62/70 ...
+[ 2022-06-05 13:20:59,404 ] Best top-1 accuracy: 89.05%, Total time: 00d-12h-25m-59s
+[ 2022-06-05 13:20:59,404 ] 
+[ 2022-06-05 13:32:38,316 ] Epoch: 63/70, Training accuracy: 39672/40080(98.98%), Training time: 698.91s
+[ 2022-06-05 13:32:38,316 ] 
+[ 2022-06-05 13:32:38,317 ] Evaluating for epoch 63/70 ...
+[ 2022-06-05 13:34:30,177 ] Top-1 accuracy: 14753/16480(89.52%), Top-5 accuracy: 16215/16480(98.39%), Mean loss:0.3810
+[ 2022-06-05 13:34:30,177 ] Evaluating time: 111.86s, Speed: 147.33 sequnces/(second*GPU)
+[ 2022-06-05 13:34:30,177 ] 
+[ 2022-06-05 13:34:30,177 ] Saving model for epoch 63/70 ...
+[ 2022-06-05 13:34:30,204 ] Best top-1 accuracy: 89.52%, Total time: 00d-12h-39m-29s
+[ 2022-06-05 13:34:30,204 ] 
+[ 2022-06-05 13:46:09,439 ] Epoch: 64/70, Training accuracy: 39762/40080(99.21%), Training time: 699.23s
+[ 2022-06-05 13:46:09,439 ] 
+[ 2022-06-05 13:46:09,440 ] Evaluating for epoch 64/70 ...
+[ 2022-06-05 13:48:02,608 ] Top-1 accuracy: 14765/16480(89.59%), Top-5 accuracy: 16209/16480(98.36%), Mean loss:0.3896
+[ 2022-06-05 13:48:02,608 ] Evaluating time: 113.17s, Speed: 145.63 sequnces/(second*GPU)
+[ 2022-06-05 13:48:02,609 ] 
+[ 2022-06-05 13:48:02,609 ] Saving model for epoch 64/70 ...
+[ 2022-06-05 13:48:02,635 ] Best top-1 accuracy: 89.59%, Total time: 00d-12h-53m-02s
+[ 2022-06-05 13:48:02,635 ] 
+[ 2022-06-05 13:59:41,369 ] Epoch: 65/70, Training accuracy: 39793/40080(99.28%), Training time: 698.73s
+[ 2022-06-05 13:59:41,370 ] 
+[ 2022-06-05 13:59:41,371 ] Evaluating for epoch 65/70 ...
+[ 2022-06-05 14:01:37,007 ] Top-1 accuracy: 14793/16480(89.76%), Top-5 accuracy: 16212/16480(98.37%), Mean loss:0.3864
+[ 2022-06-05 14:01:37,007 ] Evaluating time: 115.63s, Speed: 142.52 sequnces/(second*GPU)
+[ 2022-06-05 14:01:37,008 ] 
+[ 2022-06-05 14:01:37,008 ] Saving model for epoch 65/70 ...
+[ 2022-06-05 14:01:37,035 ] Best top-1 accuracy: 89.76%, Total time: 00d-13h-06m-36s
+[ 2022-06-05 14:01:37,035 ] 
+[ 2022-06-05 14:13:15,912 ] Epoch: 66/70, Training accuracy: 39851/40080(99.43%), Training time: 698.88s
+[ 2022-06-05 14:13:15,912 ] 
+[ 2022-06-05 14:13:15,913 ] Evaluating for epoch 66/70 ...
+[ 2022-06-05 14:15:11,973 ] Top-1 accuracy: 14787/16480(89.73%), Top-5 accuracy: 16214/16480(98.39%), Mean loss:0.3883
+[ 2022-06-05 14:15:11,973 ] Evaluating time: 116.06s, Speed: 142.00 sequnces/(second*GPU)
+[ 2022-06-05 14:15:11,973 ] 
+[ 2022-06-05 14:15:11,973 ] Saving model for epoch 66/70 ...
+[ 2022-06-05 14:15:11,999 ] Best top-1 accuracy: 89.76%, Total time: 00d-13h-20m-11s
+[ 2022-06-05 14:15:11,999 ] 
+[ 2022-06-05 14:26:49,839 ] Epoch: 67/70, Training accuracy: 39891/40080(99.53%), Training time: 697.84s
+[ 2022-06-05 14:26:49,839 ] 
+[ 2022-06-05 14:26:49,840 ] Evaluating for epoch 67/70 ...
+[ 2022-06-05 14:28:46,522 ] Top-1 accuracy: 14770/16480(89.62%), Top-5 accuracy: 16202/16480(98.31%), Mean loss:0.3955
+[ 2022-06-05 14:28:46,522 ] Evaluating time: 116.68s, Speed: 141.24 sequnces/(second*GPU)
+[ 2022-06-05 14:28:46,523 ] 
+[ 2022-06-05 14:28:46,523 ] Saving model for epoch 67/70 ...
+[ 2022-06-05 14:28:46,550 ] Best top-1 accuracy: 89.76%, Total time: 00d-13h-33m-46s
+[ 2022-06-05 14:28:46,550 ] 
+[ 2022-06-05 14:40:24,475 ] Epoch: 68/70, Training accuracy: 39891/40080(99.53%), Training time: 697.92s
+[ 2022-06-05 14:40:24,475 ] 
+[ 2022-06-05 14:40:24,476 ] Evaluating for epoch 68/70 ...
+[ 2022-06-05 14:42:20,910 ] Top-1 accuracy: 14813/16480(89.88%), Top-5 accuracy: 16214/16480(98.39%), Mean loss:0.3910
+[ 2022-06-05 14:42:20,910 ] Evaluating time: 116.43s, Speed: 141.54 sequnces/(second*GPU)
+[ 2022-06-05 14:42:20,911 ] 
+[ 2022-06-05 14:42:20,911 ] Saving model for epoch 68/70 ...
+[ 2022-06-05 14:42:20,942 ] Best top-1 accuracy: 89.88%, Total time: 00d-13h-47m-20s
+[ 2022-06-05 14:42:20,942 ] 
+[ 2022-06-05 14:53:59,531 ] Epoch: 69/70, Training accuracy: 39908/40080(99.57%), Training time: 698.59s
+[ 2022-06-05 14:53:59,531 ] 
+[ 2022-06-05 14:53:59,532 ] Evaluating for epoch 69/70 ...
+[ 2022-06-05 14:55:54,000 ] Top-1 accuracy: 14791/16480(89.75%), Top-5 accuracy: 16208/16480(98.35%), Mean loss:0.3930
+[ 2022-06-05 14:55:54,000 ] Evaluating time: 114.47s, Speed: 143.97 sequnces/(second*GPU)
+[ 2022-06-05 14:55:54,000 ] 
+[ 2022-06-05 14:55:54,000 ] Saving model for epoch 69/70 ...
+[ 2022-06-05 14:55:54,029 ] Best top-1 accuracy: 89.88%, Total time: 00d-14h-00m-53s
+[ 2022-06-05 14:55:54,029 ] 
+[ 2022-06-05 15:07:25,502 ] Epoch: 70/70, Training accuracy: 39908/40080(99.57%), Training time: 691.47s
+[ 2022-06-05 15:07:25,502 ] 
+[ 2022-06-05 15:07:25,503 ] Evaluating for epoch 70/70 ...
+[ 2022-06-05 15:09:20,578 ] Top-1 accuracy: 14815/16480(89.90%), Top-5 accuracy: 16218/16480(98.41%), Mean loss:0.3894
+[ 2022-06-05 15:09:20,578 ] Evaluating time: 115.07s, Speed: 143.21 sequnces/(second*GPU)
+[ 2022-06-05 15:09:20,578 ] 
+[ 2022-06-05 15:09:20,578 ] Saving model for epoch 70/70 ...
+[ 2022-06-05 15:09:20,605 ] Best top-1 accuracy: 89.90%, Total time: 00d-14h-14m-20s
+[ 2022-06-05 15:09:20,605 ] 
+[ 2022-06-05 15:09:20,605 ] Finish training!
+[ 2022-06-05 15:09:20,605 ] 
+[ 2022-06-05 15:09:20,605 ] Best top-1 accuracy: 89.90%, Total time: 00d-14h-14m-20s
+[ 2022-06-05 15:09:20,605 ] 
+[ 2022-06-05 15:09:20,605 ] Finish training!
+[ 2022-06-05 15:09:20,605 ] 
