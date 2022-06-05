@@ -57,7 +57,7 @@
     # python main.py -c 2002 // 在x-view数据集上训练
 
 训练模型将保留在temp文件夹下。
-训练log: [xview.log](https://github.com/Wuxiao85/paddle_EfficientGCNv/blob/main/workdir/2002_EfficientGCN-B0_ntu-xview/2022-06-05%2000-51-10/log.txt), [xsub.log]()
+训练log: [xview.log](https://github.com/Wuxiao85/paddle_EfficientGCNv/blob/main/workdir/2002_EfficientGCN-B0_ntu-xview/2022-06-05%2000-51-10/log.txt), [xsub.log](https://github.com/Wuxiao85/paddle_EfficientGCNv/blob/main/workdir/2001_EfficientGCN-B0_ntu-xsub/2022-06-05%2000-52-01/log.txt)
 部分训练log：
 x-view：
     
