@@ -1,34 +1,34 @@
-## 基于PaddlePaddle实现的 EfficientGCNv1
-#### 简介
+# 基于PaddlePaddle实现的 EfficientGCNv1
+## 1. 简介
 [EfficientGCN: Constructing Stronger and Faster Baselines for Skeleton-based Action Recognition](https://paperswithcode.com/paper/constructing-stronger-and-faster-baselines)
 一文提出了基于骨架行为识别的baseline，在论文中，将基于骨架识别的网络分为input branch和 main stream两部分。Input branch 用于提取骨架数据的多模态特征，提取的特征通过concat等操作完成特征融合后将输入main stream中预测动作分类。
 
 ![EfficientGCN](./images/model.PNG)
 
 [官方源码](https://gitee.com/yfsong0709/EfficientGCNv1)
-#### 数据集和复现精度
-###### NTU-RGB-D60
+## 2. 数据集和复现精度
+#### 2. 1NTU-RGB-D60
 下载地址: https://drive.google.com/open?id=1CUZnBtYwifVXS21yVg62T-vrPVayso5H
-###### 复现精度（待调整）
+#### 2.2 复现精度（待调整）
 |      | x-sub | x-view |
 |:----:|:-----:|:------:| 
 |  论文  | 90.2  |  94.9  | 
 | 复现精度 | 89.9  | 94.66  |
-#### 准备环境
-基本环境
+## 3. 准备环境
+**基本环境**
 * Python: 3.7
 * PaddlePaddle: 2.2.2
-使用模块安装
+**模块安装**
 
     pip install -r requirements.txt
     
-#### 快速开始
-###### 1. 下载数据集
+## 4. 快速开始
+#### 4.1 下载数据集
 到官网下载好数据集
-###### 2. 下载本项目及训练权重
+#### 4.2 下载本项目及训练权重
     git clone git@github.com:Wuxiao85/paddle_EfficientGCNv.git
 预训练网络下载: [xsub.pdparams](https://github.com/Wuxiao85/paddle_EfficientGCNv/blob/main/pretrain_model/xsub.pdparams), [xview.pdparams](https://github.com/Wuxiao85/paddle_EfficientGCNv/blob/main/pretrain_model/xview.pdparams)
-###### 3. 数据预处理
+#### 4.3 数据预处理
 修改config文件中的骨架数据地址
 
     ntu60_path: <your file path to ntu60>
@@ -56,7 +56,7 @@
     │  │  │  │  │─ eval_label.pkl
     │
     │
-###### 4. 模型训练
+#### 4.4 模型训练
 执行
 
     # export CUDA_VISIBLE_DEVICES=0 // 用到的gpu编号
@@ -106,7 +106,7 @@ x-sub:
     [ 2022-06-05 15:09:20,605 ] 
     [ 2022-06-05 15:09:20,605 ] Finish training!
     [ 2022-06-05 15:09:20,605 ] 
-###### 5. 模型预测
+#### 4.5 模型预测
 执行
 
     # export CUDA_VISIBLE_DEVICES=0 // 用到的gpu编号
@@ -142,7 +142,7 @@ x-sub 预测结果:
     INFO 2022-06-05 15:48:18,918 processor.py:84]
     INFO 2022-06-05 15:48:18,918 processor.py:108] Finish evaluating!
 
-#### 项目结构
+## 5. 项目结构
     ├─data	
     ├─configs # 配置文件
     │  ├─2001.yaml
@@ -172,8 +172,8 @@ x-sub 预测结果:
     ├─utils.py
     │
     │
-#### 模型动转静   
-###### 1. 模型动转静
+## 6. 模型动转静   
+#### 6.1 模型动转静
 以x-sub数据集作为推理示范
 运行
 
@@ -192,10 +192,10 @@ x-sub 预测结果:
     INFO 2022-06-05 15:48:18,918 processor.py:108] Finish evaluating!
 
     
-###### 2. 模型推理
+#### 6.2 模型推理
 
-#### TIPC
-#### 参考及引用
+## 7. TIPC
+## 参考及引用
     @article{song2022constructing,
       author    = {Song, Yi-Fan and Zhang, Zhang and Shan, Caifeng and Wang, Liang},
       title     = {Constructing stronger and faster baselines for skeleton-based action recognition},
