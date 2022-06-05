@@ -58,7 +58,9 @@
 
 训练模型将保留在temp文件夹下。
 训练log: [xview.log](https://github.com/Wuxiao85/paddle_EfficientGCNv/blob/main/workdir/2002_EfficientGCN-B0_ntu-xview/2022-06-05%2000-51-10/log.txt), [xsub.log](https://github.com/Wuxiao85/paddle_EfficientGCNv/blob/main/workdir/2001_EfficientGCN-B0_ntu-xsub/2022-06-05%2000-52-01/log.txt)
+
 部分训练log：
+
 x-view：
     
     [ 2022-06-05 14:13:19,296 ] Epoch: 70/70, Training accuracy: 37307/37632(99.14%), Training time: 644.48s
