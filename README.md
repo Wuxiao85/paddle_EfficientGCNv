@@ -180,6 +180,17 @@ x-sub 预测结果:
     python main.py -c 2001 -ex -pp xsub.pdparams // 这里可以转换成自己的模型目录
 执行完成后将在xsub.pdparams同级文件夹下生成pdmodel, pdiparams, 以及pdiparams.info 文件。
 转换输出log如下
+
+    INFO 2022-06-05 15:46:22,605 processor.py:97] Loading evaluating model ...
+    INFO 2022-06-05 15:46:22,649 processor.py:102] Successful!
+    INFO 2022-06-05 15:46:22,649 processor.py:103]
+    INFO 2022-06-05 15:46:22,649 processor.py:106] Starting evaluating ...
+    100%|█████████████████████████████████████████████████████████████████████████████████| 1030/1030 [01:56<00:00,  8.86it/s]
+    INFO 2022-06-05 15:48:18,917 processor.py:78] Top-1 accuracy: 14814/16480(89.89%), Top-5 accuracy: 16218/16480(98.41%), Mean loss:0.3897
+    INFO 2022-06-05 15:48:18,918 processor.py:81] Evaluating time: 116.27s, Speed: 141.74 sequnces/(second*GPU)
+    INFO 2022-06-05 15:48:18,918 processor.py:84]
+    INFO 2022-06-05 15:48:18,918 processor.py:108] Finish evaluating!
+
     
 ###### 2. 模型推理
 
