@@ -185,20 +185,22 @@ class SpatialGraphConv(nn.Layer):
         self.s_kernel_size = max_graph_distance + 1
         self.gcn = nn.Conv2D(in_channel, out_channel * self.s_kernel_size, 1, stride=(1, 1), bias_attr=bias)
         A = A[:self.s_kernel_size]
-        A = self.create_parameter(
-            shape=A.shape, dtype='float32', default_initializer=nn.initializer.Assign(A)
+        _A = self.create_parameter(
+            shape=A.shape, dtype='float32', attr=paddle.ParamAttr(initializer=nn.initializer.Assign(A), trainable=False)
         )
-        self.add_parameter('A', A)
-        self.A.stop_gradient=True
+        self.add_parameter('A', _A)
+        
         if edge:
-            ones = paddle.ones_like(self.A )
-            """_edge = self.create_parameter(
-                shape=ones.shape, dtype='float32', default_initializer=nn.initializer.Assign(ones)
+            ones = paddle.ones_like(self.A)
+            _edge = self.create_parameter(
+                shape=ones.shape, dtype='float32', attr=paddle.ParamAttr(initializer=nn.initializer.Assign(ones), trainable=True)
             )
-            self.add_parameter('edge', _edge)"""
-            self.edge = paddle.to_tensor(ones, stop_gradient=True)
+            self.add_parameter('edge', _edge)
         else:
-            self.add_parameter('edge', paddle.to_tensor(1, stop_gradient=True))
+            _edge = self.create_parameter(
+                shape=[1], dtype='float32', attr=paddle.ParamAttr(initializer=nn.initializer.Assign(paddle.to_tensor(1)), trainable=True)
+            )
+            self.add_parameter('edge', _edge)
     
     def forward(self, x):
         x = self.gcn(x)

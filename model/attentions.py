@@ -59,7 +59,7 @@ class Part_Att(nn.Layer):
         self.parts = parts
         joints = self.get_corr_joints()
         joints = self.create_parameter(
-            shape=joints.shape, dtype=str(joints.numpy().dtype), default_initializer=paddle.nn.initializer.Assign(joints)
+            shape=A.shape, dtype=str(joints.numpy().dtype), attr=paddle.ParamAttr(initializer=nn.initializer.Assign(joints), trainable=False)
         )
         self.add_parameter('joints', joints)
         
@@ -73,7 +73,6 @@ class Part_Att(nn.Layer):
             nn.ReLU(),
             nn.Conv2D(inner_channel, channel * len(self.parts), kernel_size=1, stride=(1, 1), bias_attr=bias)
         )
-    @paddle.jit.to_static()
     def forward(self, x):
         N, C, T, V = x.shape
         x_att = self.softmax(self.fcn(x).view(N, C, 1, len(self.parts)))
@@ -97,7 +96,6 @@ class Channel_Att(nn.Layer):
             nn.Conv2D(channel // 4, channel, kernel_size=1, stride=(1, 1)),
             nn.Sigmoid()
         )
-    @paddle.jit.to_static()
     def forward(self, x):
         return self.fcn(x)
 
@@ -109,7 +107,6 @@ class Frame_Att(nn.Layer):
         self.max_pool = nn.AdaptiveMaxPool2D(1)
 
         self.conv = nn.Conv2D(2, 1, kernel_size=(9, 1), stride=(1, 1), padding=(4, 0))
-    @paddle.jit.to_static()
     def forward(self, x):
         x = x.transpose((0, 2, 1, 3))
         x = paddle.concat([self.avg_pool(x), self.max_pool(x)], axis=2).transpose([0, 2, 1, 3])
@@ -128,7 +125,6 @@ class Joint_Att(nn.Layer):
             nn.Conv2D(num_joints//2, num_joints, kernel_size=1, stride=(1, 1)),
             nn.Softmax(axis=1)
         )
-    @paddle.jit.to_static()
     def forward(self, x):
         return self.fcn(x.transpose((0, 3, 2, 1))).transpose((0, 3, 2, 1))
 

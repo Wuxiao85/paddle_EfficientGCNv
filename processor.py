@@ -1,6 +1,7 @@
 import logging, paddle, numpy as np
 from tqdm import tqdm
 from time import time
+import os
 
 import utils as U
 from initializer import Initializer
@@ -88,7 +89,7 @@ class Proccessor(Initializer):
     def start(self):
         start_time = time()
         if self.args.evaluate:
-             if self.args.debug:
+            if self.args.debug:
                 logging.warning('Warning: Using debug setting now!')
                 logging.info('')
 
@@ -96,7 +97,6 @@ class Proccessor(Initializer):
             logging.info('Loading evaluating model ...')
             
             checkpoint = paddle.load(self.model_name)
-
             if checkpoint:
                 self.model.set_state_dict(checkpoint['model'])
             logging.info('Successful!')
@@ -127,11 +127,11 @@ class Proccessor(Initializer):
                         is_best = True
                         best_state.update({'acc_top1':acc_top1, 'acc_top5':acc_top5, 'cm':cm})
                 logging.info('Saving model for epoch {}/{} ...'.format(epoch+1, self.max_epoch))  
-                obj = {'model': self.model.state_dict(), 'opt': self.optimizer.state_dict(), 'epoch': epoch}
+                obj = {'model': self.model.state_dict(), 'opt': self.optimizer.state_dict(), 'epoch': epoch, 'best_state': best_state, 'scheduler': self.scheduler.state_dict()}
                 if epoch != self.max_epoch - 1:
-                    paddle.save(obj, 'temp1/{}/{}.pdparams'.format(epoch+1, self.max_epoch))
+                    paddle.save(obj, 'sub/{}/{}.pdparams'.format(epoch+1, self.max_epoch))
                 else:
-                    paddle.save(obj, 'temp1/model.pdparams')
+                    paddle.save(obj, 'sub/model.pdparams')
                 logging.info('Best top-1 accuracy: {:.2%}, Total time: {}'.format(
                     best_state['acc_top1'], U.get_time(time()-start_time)
                 ))
@@ -141,8 +141,28 @@ class Proccessor(Initializer):
             logging.info('Finish training!')
             logging.info('')    
 
+    def extract(self):
+        if self.args.debug:
+            logging.warning('Warning: Using debug setting now!')
+            logging.info('')
 
+        # Loading Evaluating Model
+        logging.info('Loading model ...')
+        checkpoint = paddle.load(self.model_name)
+        if checkpoint:
+            self.model.set_state_dict(checkpoint['model'])
+        logging.info('data shape:' + self.data_shape)            
+        self.data_shape.insert(0, self.eval_batch_size)
+        self.model.eval()
+        new_net = paddle.jit.to_static(self.model, input_spec=[paddle.static.InputSpec(shape=self.data_shape, dtype='float32')])
+        save_path = self.model_name.replace('.pdparams', "")
+        if not os.path.exists(save_path):
+            os.mkdir(save_path)
+        paddle.jit.save(new_net, save_path)
+        logging.info('Successful!')
+        logging.info('')
 
+    
 
 
         

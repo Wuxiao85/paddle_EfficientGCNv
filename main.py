@@ -15,7 +15,8 @@ def main():
         g = Generator(args)
         g.start()
     elif args.extract:
-        pass
+        p = Proccessor(args)
+        p.extract()
     else:
         p = Proccessor(args)
         p.start()
@@ -33,6 +34,7 @@ def init_parser():
 
     # Processing
     parser.add_argument('--debug', '-db', default=False, action='store_true', help='Debug')
+    parser.add_argument('--static', '-st', default=False, action='store_true', help='Debug')
     parser.add_argument('--resume', '-r', default=False, action='store_true', help='Resume from checkpoint')
     parser.add_argument('--evaluate', '-e', default=False, action='store_true', help='Evaluate')
     parser.add_argument('--extract', '-ex', default=False, action='store_true', help='Extract')

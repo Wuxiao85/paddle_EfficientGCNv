@@ -30,7 +30,7 @@ class Initializer():
             self.model_name = 'debug'
         elif self.args.evaluate or self.args.extract:
             self.no_progress_bar = self.args.no_progress_bar
-            self.model_name = '{}_{}_{}'.format(self.args.config, self.args.model_type, self.args.dataset)
+            self.model_name = self.args.pretrained_path
             warnings.filterwarnings('ignore')
         else:
             self.no_progress_bar = self.args.no_progress_bar

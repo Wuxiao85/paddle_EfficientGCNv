@@ -35,7 +35,6 @@ class EfficientGCN(nn.Layer):
 
         # init parameters
         init_param(self.sublayers())
-    @paddle.jit.to_static()
     def forward(self, x):
 
         N, I, C, T, V, M = x.shape
