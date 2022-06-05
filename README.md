@@ -182,15 +182,29 @@ x-sub 预测结果:
 执行完成后将在xsub.pdparams同级文件夹下生成pdmodel, pdiparams, 以及pdiparams.info 文件。
 转换输出log如下
 
-    INFO 2022-06-05 15:46:22,605 processor.py:97] Loading evaluating model ...
-    INFO 2022-06-05 15:46:22,649 processor.py:102] Successful!
-    INFO 2022-06-05 15:46:22,649 processor.py:103]
-    INFO 2022-06-05 15:46:22,649 processor.py:106] Starting evaluating ...
-    100%|█████████████████████████████████████████████████████████████████████████████████| 1030/1030 [01:56<00:00,  8.86it/s]
-    INFO 2022-06-05 15:48:18,917 processor.py:78] Top-1 accuracy: 14814/16480(89.89%), Top-5 accuracy: 16218/16480(98.41%), Mean loss:0.3897
-    INFO 2022-06-05 15:48:18,918 processor.py:81] Evaluating time: 116.27s, Speed: 141.74 sequnces/(second*GPU)
-    INFO 2022-06-05 15:48:18,918 processor.py:84]
-    INFO 2022-06-05 15:48:18,918 processor.py:108] Finish evaluating!
+    INFO 2022-06-05 20:31:20,772 initializer.py:44] Saving folder path: ./workdir/temp
+    INFO 2022-06-05 20:31:20,772 initializer.py:14]
+    INFO 2022-06-05 20:31:20,772 initializer.py:15] Starting preparing ...
+    INFO 2022-06-05 20:31:20,776 initializer.py:44] Saving folder path: ./workdir/temp
+    INFO 2022-06-05 20:31:20,776 initializer.py:39] Saving model name: xsub.pdparams
+    INFO 2022-06-05 20:31:20,791 initializer.py:70] Dataset: ntu-xsub
+    INFO 2022-06-05 20:31:20,791 initializer.py:71] Batch size: train-16, eval-16
+    INFO 2022-06-05 20:31:20,791 initializer.py:72] Data shape (branch, channel, frame, joint, person): [3, 6, 288, 25, 2]
+    INFO 2022-06-05 20:31:20,791 initializer.py:73] Number of action classes: 60
+    W0605 20:31:22.415406 1489696 gpu_context.cc:278] Please NOTE: device: 0, GPU Compute Capability: 8.6, Driver API Version: 11.4, Runtime API Version: 11.2
+    W0605 20:31:22.419064 1489696 gpu_context.cc:306] device: 0, cuDNN Version: 8.4.
+    INFO 2022-06-05 20:39:19,794 initializer.py:83] Model: EfficientGCN-B0 {'stem_channel': 64, 'block_args': [[48, 1, 0.5], [24, 1, 0.5], [64, 2, 1], [128, 2, 1]], 'fusion_stage': 2, 'act_type': 'swish', 'att_type': 'stja', 'layer_type': 'SG', 'drop_prob': 0.25, 'kernel_size': [5, 2], 'scale_args': [1.2, 1.35], 'expand_ratio': 0, 'reduct_ratio': 2, 'bias': True, 'edge': True}
+    INFO 2022-06-05 20:39:19,796 initializer.py:107] LR_Scheduler: cosine {'max_epoch': 70, 'warm_up': 10}
+    INFO 2022-06-05 20:39:19,797 initializer.py:99] Optimizer: Momentum {'learning_rate': <paddle.optimizer.lr.LambdaDecay object at 0x7f694ffe1ee0>, 'momentum': 0.9, 'use_nesterov': True, 'weight_decay': 0.0001}
+    INFO 2022-06-05 20:39:19,797 initializer.py:110] Loss function: CrossEntropyLoss
+    INFO 2022-06-05 20:39:19,797 initializer.py:23] Successful!
+    INFO 2022-06-05 20:39:19,797 initializer.py:24]
+    INFO 2022-06-05 20:39:19,797 processor.py:150] Loading model ...
+    INFO 2022-06-05 20:39:22,976 processor.py:159] Successful!
+    INFO 2022-06-05 20:39:22,976 processor.py:160]
+  
+转换后的模型可在[static model](https://github.com/Wuxiao85/paddle_EfficientGCNv/blob/main/pretrain_model/) 获取
+
 
     
 #### 6.2 模型推理
