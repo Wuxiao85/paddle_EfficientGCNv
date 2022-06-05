@@ -174,7 +174,15 @@ x-sub 预测结果:
     │
 #### 模型动转静   
 ###### 1. 模型动转静
+以x-sub数据集作为推理示范
+运行
+
+    python main.py -c 2001 -ex -pp xsub.pdparams // 这里可以转换成自己的模型目录
+执行完成后将在xsub.pdparams同级文件夹下生成pdmodel, pdiparams, 以及pdiparams.info 文件。
+转换输出log如下
+    
 ###### 2. 模型推理
+
 #### TIPC
 #### 参考及引用
     @article{song2022constructing,
