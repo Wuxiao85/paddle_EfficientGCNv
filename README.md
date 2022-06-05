@@ -7,7 +7,7 @@
 #### 数据集和复现精度
 ###### NTU-RGB-D60
 下载地址: https://drive.google.com/open?id=1CUZnBtYwifVXS21yVg62T-vrPVayso5H
-###### 复现精度
+###### 复现精度（待调整）
 |      | x-sub | x-view |
 |:----:|:-----:|:------:| 
 |  论文  | 90.2  |  94.9  | 
