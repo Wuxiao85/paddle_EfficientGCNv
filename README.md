@@ -13,7 +13,7 @@
 |      | x-sub | x-view |
 |:----:|:-----:|:------:| 
 |  论文  | 90.2  |  94.9  | 
-| 复现精度 | 89.9  | 94.66  |
+| 复现精度 | 90.22  | 94.71  |
 ## 3. 准备环境
 **基本环境**
 * Python: 3.7
@@ -75,38 +75,50 @@
 
 x-view：
     
-    [ 2022-06-05 14:13:19,296 ] Epoch: 70/70, Training accuracy: 37307/37632(99.14%), Training time: 644.48s
-    [ 2022-06-05 14:13:19,296 ] 
-    [ 2022-06-05 14:13:19,297 ] Evaluating for epoch 70/70 ...
-    [ 2022-06-05 14:15:30,463 ] Top-1 accuracy: 17868/18928(94.40%), Top-5 accuracy: 18775/18928(99.19%), Mean loss:0.2006
-    [ 2022-06-05 14:15:30,464 ] Evaluating time: 131.16s, Speed: 144.31 sequnces/(second*GPU)
-    [ 2022-06-05 14:15:30,464 ] 
-    [ 2022-06-05 14:15:30,464 ] Saving model for epoch 70/70 ...
-    [ 2022-06-05 14:15:30,491 ] Best top-1 accuracy: 94.66%, Total time: 00d-13h-19m-50s
-    [ 2022-06-05 14:15:30,491 ] 
-    [ 2022-06-05 14:15:30,491 ] Finish training!
-    [ 2022-06-05 14:15:30,491 ] 
-    
-    [ 2022-06-05 14:15:30,491 ] Best top-1 accuracy: 94.66%, Total time: 00d-13h-19m-50s
-    [ 2022-06-05 14:15:30,491 ] 
-    [ 2022-06-05 14:15:30,491 ] Finish training!
-    [ 2022-06-05 14:15:30,491 ] 
+    [ 2022-06-06 05:42:24,943 ] Best top-1 accuracy: 94.71%, Total time: 00d-13h-15m-32s
+    [ 2022-06-06 05:42:24,943 ] 
+    [ 2022-06-06 05:53:16,878 ] Epoch: 70/70, Training accuracy: 37300/37632(99.12%), Training time: 651.93s
+    [ 2022-06-06 05:53:16,879 ] 
+    [ 2022-06-06 05:53:16,880 ] Evaluating for epoch 70/70 ...
+    [ 2022-06-06 05:55:27,984 ] Top-1 accuracy: 17898/18928(94.56%), Top-5 accuracy: 18800/18928(99.32%), Mean loss:0.1896
+    [ 2022-06-06 05:55:27,985 ] Evaluating time: 131.10s, Speed: 144.37 sequnces/(second*GPU)
+    [ 2022-06-06 05:55:27,985 ] 
+    [ 2022-06-06 05:55:27,985 ] Saving model for epoch 70/70 ...
+    [ 2022-06-06 05:55:28,010 ] Best top-1 accuracy: 94.71%, Total time: 00d-13h-28m-35s
+    [ 2022-06-06 05:55:28,010 ] 
+    [ 2022-06-06 05:55:28,010 ] Finish training!
+    [ 2022-06-06 05:55:28,010 ] 
+
+    [ 2022-06-06 05:55:28,010 ] Best top-1 accuracy: 94.71%, Total time: 00d-13h-28m-35s
+    [ 2022-06-06 05:55:28,010 ] 
+    [ 2022-06-06 05:55:28,010 ] Finish training!
+    [ 2022-06-06 05:55:28,010 ]  
 
 x-sub:
     
-    [ 2022-06-05 15:07:25,503 ] Evaluating for epoch 70/70 ...
-    [ 2022-06-05 15:09:20,578 ] Top-1 accuracy: 14815/16480(89.90%), Top-5 accuracy: 16218/16480(98.41%), Mean loss:0.3894
-    [ 2022-06-05 15:09:20,578 ] Evaluating time: 115.07s, Speed: 143.21 sequnces/(second*GPU)
-    [ 2022-06-05 15:09:20,578 ] 
-    [ 2022-06-05 15:09:20,578 ] Saving model for epoch 70/70 ...
-    [ 2022-06-05 15:09:20,605 ] Best top-1 accuracy: 89.90%, Total time: 00d-14h-14m-20s
-    [ 2022-06-05 15:09:20,605 ] 
-    [ 2022-06-05 15:09:20,605 ] Finish training!
-    [ 2022-06-05 15:09:20,605 ] 
-    [ 2022-06-05 15:09:20,605 ] Best top-1 accuracy: 89.90%, Total time: 00d-14h-14m-20s
-    [ 2022-06-05 15:09:20,605 ] 
-    [ 2022-06-05 15:09:20,605 ] Finish training!
-    [ 2022-06-05 15:09:20,605 ] 
+    [ 2022-06-06 06:23:48,406 ] Evaluating for epoch 69/70 ...
+    [ 2022-06-06 06:25:40,001 ] Top-1 accuracy: 14868/16480(90.22%), Top-5 accuracy: 16238/16480(98.53%), Mean loss:0.3653
+    [ 2022-06-06 06:25:40,001 ] Evaluating time: 111.59s, Speed: 147.68 sequnces/(second*GPU)
+    [ 2022-06-06 06:25:40,001 ] 
+    [ 2022-06-06 06:25:40,001 ] Saving model for epoch 69/70 ...
+    [ 2022-06-06 06:25:40,028 ] Best top-1 accuracy: 90.22%, Total time: 00d-13h-58m-48s
+    [ 2022-06-06 06:25:40,028 ] 
+    [ 2022-06-06 06:37:12,182 ] Epoch: 70/70, Training accuracy: 39904/40080(99.56%), Training time: 692.15s
+    [ 2022-06-06 06:37:12,183 ] 
+    [ 2022-06-06 06:37:12,183 ] Evaluating for epoch 70/70 ...
+    [ 2022-06-06 06:39:03,073 ] Top-1 accuracy: 14840/16480(90.05%), Top-5 accuracy: 16249/16480(98.60%), Mean loss:0.3652
+    [ 2022-06-06 06:39:03,073 ] Evaluating time: 110.89s, Speed: 148.62 sequnces/(second*GPU)
+    [ 2022-06-06 06:39:03,073 ] 
+    [ 2022-06-06 06:39:03,073 ] Saving model for epoch 70/70 ...
+    [ 2022-06-06 06:39:03,098 ] Best top-1 accuracy: 90.22%, Total time: 00d-14h-12m-11s
+    [ 2022-06-06 06:39:03,098 ] 
+    [ 2022-06-06 06:39:03,099 ] Finish training!
+    [ 2022-06-06 06:39:03,099 ] 
+    [ 2022-06-06 06:39:03,098 ] Best top-1 accuracy: 90.22%, Total time: 00d-14h-12m-11s
+    [ 2022-06-06 06:39:03,098 ] 
+    [ 2022-06-06 06:39:03,099 ] Finish training!
+    [ 2022-06-06 06:39:03,099 ]
+    
 #### 4.5 模型预测
 执行
 
@@ -133,15 +145,18 @@ x-view 预测结果:
 
 x-sub 预测结果:
 
-    INFO 2022-06-05 15:46:22,605 processor.py:97] Loading evaluating model ...
-    INFO 2022-06-05 15:46:22,649 processor.py:102] Successful!
-    INFO 2022-06-05 15:46:22,649 processor.py:103]
-    INFO 2022-06-05 15:46:22,649 processor.py:106] Starting evaluating ...
-    100%|█████████████████████████████████████████████████████████████████████████████████| 1030/1030 [01:56<00:00,  8.86it/s]
-    INFO 2022-06-05 15:48:18,917 processor.py:78] Top-1 accuracy: 14814/16480(89.89%), Top-5 accuracy: 16218/16480(98.41%), Mean loss:0.3897
-    INFO 2022-06-05 15:48:18,918 processor.py:81] Evaluating time: 116.27s, Speed: 141.74 sequnces/(second*GPU)
-    INFO 2022-06-05 15:48:18,918 processor.py:84]
-    INFO 2022-06-05 15:48:18,918 processor.py:108] Finish evaluating!
+    INFO 2022-06-06 08:48:27,548 initializer.py:23] Successful!
+    INFO 2022-06-06 08:48:27,548 initializer.py:24]
+    INFO 2022-06-06 08:48:27,548 processor.py:97] Loading evaluating model ...
+    INFO 2022-06-06 08:48:27,600 processor.py:102] Successful!
+    INFO 2022-06-06 08:48:27,600 processor.py:103]
+    INFO 2022-06-06 08:48:27,600 processor.py:106] Starting evaluating ...
+    100%|██████████████████████████████████████████████████████████████████████████████████████████| 1030/1030 [01:55<00:00,  8.93it/s]
+    INFO 2022-06-06 08:50:22,966 processor.py:78] Top-1 accuracy: 14868/16480(90.22%), Top-5 accuracy: 16238/16480(98.53%), Mean loss:0.3653
+    INFO 2022-06-06 08:50:22,966 processor.py:81] Evaluating time: 115.36s, Speed: 142.85 sequnces/(second*GPU)
+    INFO 2022-06-06 08:50:22,966 processor.py:84]
+    INFO 2022-06-06 08:50:22,966 processor.py:108] Finish evaluating!
+
 
 ## 5. 项目结构
     ├─data	
