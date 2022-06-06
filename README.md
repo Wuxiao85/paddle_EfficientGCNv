@@ -240,7 +240,7 @@ x-sub 预测结果:
 **生成tiny数据**
 在生成tiny数据集之前，需要先按数据预处理的步骤将数据先划分成xview和xsub.
 
-    python dataset/tiny_data_gen.py --data_path <path to data geneorated before> --label_file <path to label file> --data_num <default 5*16> --save_dir <path to tiny data>
+    python dataset/tiny_data_gen.py --data_path <path to data geneorated before> --label_path <path to label file> --data_num <default 5*16> --save_dir <path to tiny data>
 
 **静态模型推理**
 运行
