@@ -240,7 +240,7 @@ x-sub 预测结果:
 **生成tiny数据**
 在生成tiny数据集之前，需要先按数据预处理的步骤将数据先划分成xview和xsub.
 
-    python dataset/tiny_data_gen.py --data_path <path to data geneorated before> --label_path <path to label file> --data_num <default 5*16> --save_dir <path to tiny data>
+    python dataset/tiny_data_gen.py --source_path <path to data geneorated before> --data_num <default 5*16> --save_dir <path to tiny data> --mode <train or eval>
 
 **静态模型推理**
 运行
@@ -264,6 +264,15 @@ x-sub 预测结果:
 
 
 ## 7. TIPC
+以下展示TIPC的简单运行过程，详细情况需前往(test_tipc)[https://github.com/Wuxiao85/paddle_EfficientGCNv/test_tipc]查看
+**准备数据集**
+   
+   bash test_tipc/prepare.sh <source path> <save directory> <mode>
+   
+**一体化脚本命令**
+    
+   bash test_tipc/test_train_inference_python.sh ./test_tipc/configs/EfficientGCNB0/train_infer_python.txt lite_train_lite_infer
+   
 ## 参考及引用
     @article{song2022constructing,
       author    = {Song, Yi-Fan and Zhang, Zhang and Shan, Caifeng and Wang, Liang},
