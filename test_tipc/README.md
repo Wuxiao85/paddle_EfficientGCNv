@@ -145,7 +145,7 @@ bash test_tipc/test_train_inference_python.sh ./test_tipc/configs/EfficientGCNB0
      Run successfully with command - python main.py -c 2001_infer -ex  --pretrained=./log/EfficinetGCNB0/lite_train_lite_infer/norm_train_gpus_0/model.pdparams!  
   
 ##### GPU/CPU 推理
-    [log](https://github.com/Wuxiao85/paddle_EfficientGCNv/tree/main/log/EfficinetGCNB0/lite_train_lite_infer)
+[log](https://github.com/Wuxiao85/paddle_EfficientGCNv/tree/main/log/EfficinetGCNB0/lite_train_lite_infer)
   
   
   
