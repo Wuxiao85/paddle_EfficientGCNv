@@ -264,14 +264,16 @@ x-sub 预测结果:
 
 
 ## 7. TIPC
-以下展示TIPC的简单运行过程，详细情况需前往(test_tipc)[https://github.com/Wuxiao85/paddle_EfficientGCNv/test_tipc]查看
+以下展示TIPC的简单运行过程，详细情况需前往[test_tipc](https://github.com/Wuxiao85/paddle_EfficientGCNv/test_tipc) 查看
 **准备数据集**
    
-   bash test_tipc/prepare.sh <source path> <save directory> <mode>
+   
+    bash test_tipc/prepare.sh <source path> <save directory> <mode>
    
 **一体化脚本命令**
     
-   bash test_tipc/test_train_inference_python.sh ./test_tipc/configs/EfficientGCNB0/train_infer_python.txt lite_train_lite_infer
+    
+    bash test_tipc/test_train_inference_python.sh ./test_tipc/configs/EfficientGCNB0/train_infer_python.txt lite_train_lite_infer
    
 ## 参考及引用
     @article{song2022constructing,
