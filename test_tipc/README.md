@@ -52,6 +52,7 @@ bash test_tipc/test_train_inference_python.sh ./test_tipc/configs/EfficientGCNB0
 ### TIPC过程log
 ##### 训练
 
+
   [ 2022-06-06 17:45:16,583 ] Saving folder path: ./log/EfficinetGCNB0/lite_train_lite_infer/norm_train_gpus_0/2001_infer_EfficientGCN-B0_ntu-xsub/2022-06-06 17-45-16
   [ 2022-06-06 17:45:16,583 ] 
   [ 2022-06-06 17:45:16,583 ] Starting preparing ...
@@ -87,7 +88,8 @@ bash test_tipc/test_train_inference_python.sh ./test_tipc/configs/EfficientGCNB0
   
   
 
-#### 验证
+##### 验证
+
 
   [ 2022-06-06 17:45:46,807 ] Saving folder path: ./workdir/temp
   [ 2022-06-06 17:45:46,807 ] 
