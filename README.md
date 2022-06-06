@@ -264,7 +264,7 @@ x-sub 预测结果:
 
 
 ## 7. TIPC
-以下展示TIPC的简单运行过程，详细情况需前往[test_tipc](https://github.com/Wuxiao85/paddle_EfficientGCNv/test_tipc) 查看.
+以下展示TIPC的简单运行过程，详细情况需前往[test_tipc](https://github.com/Wuxiao85/paddle_EfficientGCNv/main/test_tipc) 查看.
 
 **准备数据集**
    
