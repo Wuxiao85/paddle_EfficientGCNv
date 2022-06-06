@@ -186,7 +186,6 @@ x-sub 预测结果:
     ├─initializer.py
     ├─main.py 
     ├─processor.py
-    ├─transport_model.py
     ├─utils.py
     │
     │
