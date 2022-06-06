@@ -131,16 +131,18 @@ x-sub:
 
 x-view 预测结果:
     
-    INFO 2022-06-05 14:44:24,114 initializer.py:24]
-    INFO 2022-06-05 14:44:24,114 processor.py:97] Loading evaluating model ...
-    INFO 2022-06-05 14:44:24,159 processor.py:102] Successful!
-    INFO 2022-06-05 14:44:24,159 processor.py:103]
-    INFO 2022-06-05 14:44:24,160 processor.py:107] Starting evaluating ...
-    100%|█████████████████████████████████████████████████████████████████████████████████| 1183/1183 [02:46<00:00,  7.12it/s]
-    INFO 2022-06-05 14:47:10,345 processor.py:78] Top-1 accuracy: 17918/18928(94.66%), Top-5 accuracy: 18789/18928(99.27%), Mean loss:0.1837
-    INFO 2022-06-05 14:47:10,345 processor.py:81] Evaluating time: 166.18s, Speed: 113.90 sequnces/(second*GPU)
-    INFO 2022-06-05 14:47:10,346 processor.py:84]
-    INFO 2022-06-05 14:47:10,346 processor.py:109] Finish evaluating!
+    INFO 2022-06-06 09:28:43,593 initializer.py:23] Successful!
+    INFO 2022-06-06 09:28:43,593 initializer.py:24]
+    INFO 2022-06-06 09:28:43,593 processor.py:97] Loading evaluating model ...
+    INFO 2022-06-06 09:28:43,640 processor.py:102] Successful!
+    INFO 2022-06-06 09:28:43,640 processor.py:103]
+    INFO 2022-06-06 09:28:43,640 processor.py:106] Starting evaluating ...
+    100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1183/1183 [02:11<00:00,  8.98it/s]
+    INFO 2022-06-06 09:30:55,437 processor.py:78] Top-1 accuracy: 17929/18928(94.72%), Top-5 accuracy: 18795/18928(99.30%), Mean loss:0.1804
+    INFO 2022-06-06 09:30:55,438 processor.py:81] Evaluating time: 131.80s, Speed: 143.62 sequnces/(second*GPU)
+    INFO 2022-06-06 09:30:55,438 processor.py:84]
+    INFO 2022-06-06 09:30:55,438 processor.py:108] Finish evaluating!
+
 
 
 x-sub 预测结果:
