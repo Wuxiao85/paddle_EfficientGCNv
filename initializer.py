@@ -34,7 +34,7 @@ class Initializer():
             warnings.filterwarnings('ignore')
         else:
             self.no_progress_bar = self.args.no_progress_bar
-            self.model_name = '{}_{}_{}'.format(self.args.config, self.args.model_type, self.args.dataset)
+            self.model_name = self.args.pretrained_path
             warnings.filterwarnings('ignore')
         logging.info('Saving model name: {}'.format(self.model_name))
     def init_save_dir(self):
@@ -108,11 +108,6 @@ class Initializer():
     def init_loss_func(self):
         self.loss_func = paddle.nn.CrossEntropyLoss()
         logging.info('Loss function: {}'.format(self.loss_func.__class__.__name__))
-
-
-
-
-
 
 
 
