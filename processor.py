@@ -111,7 +111,18 @@ class Proccessor(Initializer):
             start_epoch = 0
             best_state = {'acc_top1':0, 'acc_top5':0, 'cm':0}
             if self.args.resume:
-                pass
+                # Loading Evaluating Model
+                logging.info('Loading pretrain model ...')
+                
+                checkpoint = paddle.load(self.model_name)
+                if checkpoint:
+                    self.model.set_state_dict(checkpoint['model'])
+                    self.scheduler.set_state_dict(checkpoint['scheduler'])
+                    self.optimizer.set_state_dict(checkpoint['opt'])
+                    start_epoch = checkpoint['epoch']
+                    best_state.update(checkpoint['best_state'])
+                logging.info('Successful!')
+                logging.info('')
 
             # Training
             logging.info('Starting training ...')
@@ -129,9 +140,9 @@ class Proccessor(Initializer):
                 logging.info('Saving model for epoch {}/{} ...'.format(epoch+1, self.max_epoch))  
                 obj = {'model': self.model.state_dict(), 'opt': self.optimizer.state_dict(), 'epoch': epoch, 'best_state': best_state, 'scheduler': self.scheduler.state_dict()}
                 if epoch != self.max_epoch - 1:
-                    paddle.save(obj, 'sub/{}/{}.pdparams'.format(epoch+1, self.max_epoch))
+                    paddle.save(obj, '{}/{}/{}.pdparams'.format(self.args.work_dir, epoch+1, self.max_epoch))
                 else:
-                    paddle.save(obj, 'sub/model.pdparams')
+                    paddle.save(obj, '{}/model.pdparams'.format(self.args.work_dir))
                 logging.info('Best top-1 accuracy: {:.2%}, Total time: {}'.format(
                     best_state['acc_top1'], U.get_time(time()-start_time)
                 ))
@@ -150,13 +161,11 @@ class Proccessor(Initializer):
         logging.info('Loading model ...')
         checkpoint = paddle.load(self.model_name)
         if checkpoint:
-            self.model.set_state_dict(checkpoint['model'])
+            self.model.set_state_dict(checkpoint['model'])          
         self.data_shape.insert(0, self.eval_batch_size)
         self.model.eval()
         new_net = paddle.jit.to_static(self.model, input_spec=[paddle.static.InputSpec(shape=self.data_shape, dtype='float32')])
         save_path = self.model_name.replace('.pdparams', "")
-        if not os.path.exists(save_path):
-            os.mkdir(save_path)
         paddle.jit.save(new_net, save_path)
         logging.info('Successful!')
         logging.info('')
