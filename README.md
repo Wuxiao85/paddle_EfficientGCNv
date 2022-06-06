@@ -143,17 +143,18 @@ x-sub:
 
 x-view 预测结果:
     
-    INFO 2022-06-06 09:28:43,593 initializer.py:23] Successful!
-    INFO 2022-06-06 09:28:43,593 initializer.py:24]
-    INFO 2022-06-06 09:28:43,593 processor.py:97] Loading evaluating model ...
-    INFO 2022-06-06 09:28:43,640 processor.py:102] Successful!
-    INFO 2022-06-06 09:28:43,640 processor.py:103]
-    INFO 2022-06-06 09:28:43,640 processor.py:106] Starting evaluating ...
-    100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1183/1183 [02:11<00:00,  8.98it/s]
-    INFO 2022-06-06 09:30:55,437 processor.py:78] Top-1 accuracy: 17929/18928(94.72%), Top-5 accuracy: 18795/18928(99.30%), Mean loss:0.1804
-    INFO 2022-06-06 09:30:55,438 processor.py:81] Evaluating time: 131.80s, Speed: 143.62 sequnces/(second*GPU)
-    INFO 2022-06-06 09:30:55,438 processor.py:84]
-    INFO 2022-06-06 09:30:55,438 processor.py:108] Finish evaluating!
+    INFO 2022-06-06 12:22:45,003 initializer.py:23] Successful!
+    INFO 2022-06-06 12:22:45,003 initializer.py:24]
+    INFO 2022-06-06 12:22:45,003 processor.py:97] Loading evaluating model ...
+    INFO 2022-06-06 12:22:45,048 processor.py:102] Successful!
+    INFO 2022-06-06 12:22:45,048 processor.py:103]
+    INFO 2022-06-06 12:22:45,048 processor.py:106] Starting evaluating ...
+    100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 1183/1183 [02:12<00:00,  8.96it/s]
+    INFO 2022-06-06 12:24:57,131 processor.py:78] Top-1 accuracy: 17948/18928(94.82%), Top-5 accuracy: 18785/18928(99.24%), Mean loss:0.1830
+    INFO 2022-06-06 12:24:57,131 processor.py:81] Evaluating time: 132.08s, Speed: 143.31 sequnces/(second*GPU)
+    INFO 2022-06-06 12:24:57,131 processor.py:84]
+    INFO 2022-06-06 12:24:57,131 processor.py:108] Finish evaluating!
+
 
 
 
@@ -236,6 +237,31 @@ x-sub 预测结果:
 
     
 #### 6.2 模型推理
+**生成tiny数据**
+在生成tiny数据集之前，需要先按数据预处理的步骤将数据先划分成xview和xsub.
+
+    python dataset/tiny_data_gen.py --data_path <path to data geneorated before> --data_file <path to tiny data> --label_file <path to label file> --data_num <default 50>
+
+**静态模型推理**
+运行
+
+    python infer.py --model_file <path to pdmodel> --params_file <path to pdiparams> --save_dir <directory to save tiny dataset> --b <batch_size>
+
+静态推理时用到的batchsize需要与 config 文件中 test_batch_size 一致。
+
+以下用xsub数据集上训练的模型示范静态推理过程。
+
+    python infer.py --model_file xsub.pdmodel --params_file xsub.pdimodel --save_dir ./dataset/ntu --b <batch_size>
+
+输出结果如下：
+
+    Batch action class Predict:  [ 0  1  2  3  4  5  6  7  8 33 10 11 12 13 14 15] Batch action class True:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] Batch Accuracy:  0.9375 Batch sample Name:  ['/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A001.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A002.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A003.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A004.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A005.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A006.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A007.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A008.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A009.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A010.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A011.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A012.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A013.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A014.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A015.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A016.skeleton']
+Batch action class Predict:  [16 17 18 19 20 21 22 23 24 25 26 27 10 29 31 31] Batch action class True:  [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31] Batch Accuracy:  0.875 Batch sample Name:  ['/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A017.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A018.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A019.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A020.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A021.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A022.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A023.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A024.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A025.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A026.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A027.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A028.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A029.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A030.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A031.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A032.skeleton']
+Batch action class Predict:  [32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 40] Batch action class True:  [32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47] Batch Accuracy:  0.9375 Batch sample Name:  ['/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A033.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A034.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A035.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A036.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A037.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A038.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A039.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A040.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A041.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A042.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A043.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A044.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A045.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A046.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A047.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A048.skeleton']
+Batch action class Predict:  [48 49 50 51 52 53 54 55 56 57 58 59  0  1  2  3] Batch action class True:  [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 0, 1, 2, 3] Batch Accuracy:  1.0 Batch sample Name:  ['/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A049.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A050.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A051.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A052.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A053.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A054.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A055.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A056.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A057.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A058.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A059.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R001A060.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A001.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A002.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A003.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A004.skeleton']
+Batch action class Predict:  [ 4  5 21  7  8  9 12 29 12 13 14 15 16 17 18  3] Batch action class True:  [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] Batch Accuracy:  0.75 Batch sample Name:  ['/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A005.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A006.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A007.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A008.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A009.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A010.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A011.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A012.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A013.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A014.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A015.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A016.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A017.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A018.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A019.skeleton', '/home/aistudio/data/data146482/nturgb+d_skeletons/S001C001P003R002A020.skeleton']
+Infer Mean Accuracy:  0.9
+
 
 ## 7. TIPC
 ## 参考及引用
