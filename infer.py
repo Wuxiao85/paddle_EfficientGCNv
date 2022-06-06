@@ -48,7 +48,6 @@ def parse_args():
     parser.add_argument("--benchmark", type=str2bool, default=True)
     parser.add_argument("--enable_mkldnn", type=str2bool, default=False)
     parser.add_argument("--cpu_threads", type=int, default=None)
-    parser.add_argument("--model-dir", default='./pretrain_models/xview.pdiparams', type=str)
     parser.add_argument("--inputs", default='JVB', type=str)    
     parser.add_argument('--data_shape', '-ds', type=int, nargs='+', default= [3, 6, 288, 25, 2], help='Using GPUs')
     parser.add_argument('--dataset', '-d', type=str, default= 'ntu', help='dataset')#
@@ -105,13 +104,14 @@ def parse_file_paths(args, data_path, label_path, use_mmap=True):
         with open(label_path, 'rb') as f:
                 sample_name, label,seq_len = pickle.load(f, encoding='latin1')
             # sample_name, label = pickle.load(f, encoding='latin1')
-
+    
     # load data
     if use_mmap:
         data = np.load(data_path, mmap_mode='r')
     else:
         data = np.load(data_path)
-    _, C, V, T, M = args.data_shape 
+    _, C, T, V, M = args.data_shape 
+    
     data_new = []
     for i, d in enumerate(data):
         joint, velocity, bone = multi_input(args, d[:,:T,:,:])
@@ -123,9 +123,9 @@ def parse_file_paths(args, data_path, label_path, use_mmap=True):
         if 'B' in args.inputs:
             d_new.append(bone)
         d_new = np.stack(d_new, axis=0)
-        data_new.append(data_new)
-    data_new = np.array(data_new)
-    return data, sample_name, label
+        data_new.append(d_new)
+    data_new = np.array(data_new, dtype=np.float32)
+    return data_new, sample_name, label
 def multi_input(args, data):
     C, T, V, M = data.shape
     joint = np.zeros((C*2, T, V, M))
@@ -156,7 +156,6 @@ def main():
     # InferenceHelper = build_inference_helper(cfg.INFERENCE)
 
     inference_config, predictor = create_paddle_predictor(args)
-
     # get data
     data, sample_name, label = parse_file_paths(args, data_path=args.data_file, label_path=args.label_file)
     # data = data[-100:]
@@ -173,7 +172,7 @@ def main():
         batched_inputs = [data[st_idx:ed_idx]]
         batch_label = label[st_idx:ed_idx]
         batch_sample_name = sample_name[st_idx:ed_idx]
-        print(batched_inputs[0].shape)
+        
         # run inference
         input_names = predictor.get_input_names()
         for i, name in enumerate(input_names):
@@ -200,11 +199,10 @@ def main():
         print('Batch action class Predict: ', predict_label,
               'Batch action class True: ', batch_label,
               'Batch Accuracy: ', acc_batch,
-              'Batch sample Name: ', batch_sample_name)
+              'Batch sample Name: ', [name[-29:] for name in batch_sample_name])
 
         
     print('Infer Mean Accuracy: ', np.mean(np.array(acc)))
-    # report benchmark log if enabled
 
 
 if __name__ == "__main__":
