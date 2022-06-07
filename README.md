@@ -309,7 +309,7 @@ x-sub 预测结果:
 
 | 信息     | 描述                                                         |
 | -------- | ------------------------------------------------------------ |
-| 作者     | [Wuxiao85](https://github.com/Wuxiao85)[winnie-nqw](https://github.com/winnie-nqw)|
+| 作者     | [Wuxiao85](https://github.com/Wuxiao85),[winnie-nqw](https://github.com/winnie-nqw)|
 | 日期     | 2022年6月                                                    |
 | 框架版本 | PaddlePaddle==2.2.0                                          |
 | 应用场景 | 骨架动作识别                                                 |
