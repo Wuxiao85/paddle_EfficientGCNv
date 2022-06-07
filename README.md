@@ -13,7 +13,7 @@
 |   EfficientGCN-B0   | x-sub | x-view |
 |:----:|:-----:|:------:| 
 |  论文  | 90.2  |  94.9  | 
-| 复现精度 | 90.22  | 94.82  |
+| 复现精度 | 90.22  | 94.91  |
 ## 3. 准备环境
 **基本环境**
 * Python: 3.7
@@ -75,35 +75,38 @@
 
 x-view：
 
-    [ 2022-06-06 11:19:57,983 ] Epoch: 68/70, Training accuracy: 37334/37632(99.21%), Training time: 648.86s
-    [ 2022-06-06 11:19:57,983 ] 
-    [ 2022-06-06 11:19:57,984 ] Evaluating for epoch 68/70 ...
-    [ 2022-06-06 11:22:10,828 ] Top-1 accuracy: 17948/18928(94.82%), Top-5 accuracy: 18785/18928(99.24%), Mean loss:0.1831
-    [ 2022-06-06 11:22:10,828 ] Evaluating time: 132.84s, Speed: 142.49 sequnces/(second*GPU)
-    [ 2022-06-06 11:22:10,828 ] 
-    [ 2022-06-06 11:22:10,828 ] Saving model for epoch 68/70 ...
-    [ 2022-06-06 11:22:10,855 ] Best top-1 accuracy: 94.82%, Total time: 00d-01h-30m-37s
-    [ 2022-06-06 11:22:10,856 ] 
-    [ 2022-06-06 11:33:02,045 ] Epoch: 69/70, Training accuracy: 37312/37632(99.15%), Training time: 651.19s
-    [ 2022-06-06 11:33:02,046 ] 
-    [ 2022-06-06 11:33:02,046 ] Evaluating for epoch 69/70 ...
-    [ 2022-06-06 11:35:13,177 ] Top-1 accuracy: 17933/18928(94.74%), Top-5 accuracy: 18790/18928(99.27%), Mean loss:0.1836
-    [ 2022-06-06 11:35:13,178 ] Evaluating time: 131.13s, Speed: 144.35 sequnces/(second*GPU)
-    [ 2022-06-06 11:35:13,178 ] 
-    [ 2022-06-06 11:35:13,178 ] Saving model for epoch 69/70 ...
-    [ 2022-06-06 11:35:13,205 ] Best top-1 accuracy: 94.82%, Total time: 00d-01h-43m-40s
-    [ 2022-06-06 11:35:13,205 ] 
-    [ 2022-06-06 11:46:00,135 ] Epoch: 70/70, Training accuracy: 37335/37632(99.21%), Training time: 646.93s
-    [ 2022-06-06 11:46:00,136 ] 
-    [ 2022-06-06 11:46:00,136 ] Evaluating for epoch 70/70 ...
-    [ 2022-06-06 11:48:11,561 ] Top-1 accuracy: 17874/18928(94.43%), Top-5 accuracy: 18785/18928(99.24%), Mean loss:0.1973
-    [ 2022-06-06 11:48:11,561 ] Evaluating time: 131.42s, Speed: 144.02 sequnces/(second*GPU)
-    [ 2022-06-06 11:48:11,561 ] 
-    [ 2022-06-06 11:48:11,561 ] Saving model for epoch 70/70 ...
-    [ 2022-06-06 11:48:11,588 ] Best top-1 accuracy: 94.82%, Total time: 00d-01h-56m-38s
-    [ 2022-06-06 11:48:11,589 ] 
-    [ 2022-06-06 11:48:11,589 ] Finish training!
-    [ 2022-06-06 11:48:11,589 ] 
+    [ 2022-06-07 12:29:39,567 ] Evaluating for epoch 68/70 ...
+    [ 2022-06-07 12:32:00,241 ] Top-1 accuracy: 17964/18928(94.91%), Top-5 accuracy: 18791/18928(99.28%), Mean loss:0.1766
+    [ 2022-06-07 12:32:00,241 ] Evaluating time: 140.67s, Speed: 134.55 sequnces/(second*GPU)
+    [ 2022-06-07 12:32:00,241 ] 
+    [ 2022-06-07 12:32:00,241 ] Saving model for epoch 68/70 ...
+    [ 2022-06-07 12:32:00,278 ] Best top-1 accuracy: 94.91%, Total time: 00d-02h-25m-13s
+    [ 2022-06-07 12:32:00,278 ] 
+    [ 2022-06-07 12:45:46,589 ] Epoch: 69/70, Training accuracy: 37335/37632(99.21%), Training time: 826.31s
+    [ 2022-06-07 12:45:46,589 ] 
+    [ 2022-06-07 12:45:46,590 ] Evaluating for epoch 69/70 ...
+    [ 2022-06-07 12:48:05,975 ] Top-1 accuracy: 17929/18928(94.72%), Top-5 accuracy: 18785/18928(99.24%), Mean loss:0.1839
+    [ 2022-06-07 12:48:05,975 ] Evaluating time: 139.38s, Speed: 135.80 sequnces/(second*GPU)
+    [ 2022-06-07 12:48:05,975 ] 
+    [ 2022-06-07 12:48:05,975 ] Saving model for epoch 69/70 ...
+    [ 2022-06-07 12:48:06,004 ] Best top-1 accuracy: 94.91%, Total time: 00d-02h-41m-19s
+    [ 2022-06-07 12:48:06,004 ] 
+    [ 2022-06-07 13:01:51,555 ] Epoch: 70/70, Training accuracy: 37354/37632(99.26%), Training time: 825.55s
+    [ 2022-06-07 13:01:51,555 ] 
+    [ 2022-06-07 13:01:51,557 ] Evaluating for epoch 70/70 ...
+    [ 2022-06-07 13:04:12,181 ] Top-1 accuracy: 17935/18928(94.75%), Top-5 accuracy: 18788/18928(99.26%), Mean loss:0.1813
+    [ 2022-06-07 13:04:12,182 ] Evaluating time: 140.62s, Speed: 134.60 sequnces/(second*GPU)
+    [ 2022-06-07 13:04:12,182 ] 
+    [ 2022-06-07 13:04:12,182 ] Saving model for epoch 70/70 ...
+    [ 2022-06-07 13:04:12,207 ] Best top-1 accuracy: 94.91%, Total time: 00d-02h-57m-25s
+    [ 2022-06-07 13:04:12,208 ] 
+    [ 2022-06-07 13:04:12,208 ] Finish training!
+    [ 2022-06-07 13:04:12,208 ] 
+
+    [ 2022-06-07 13:04:12,207 ] Best top-1 accuracy: 94.91%, Total time: 00d-02h-57m-25s
+    [ 2022-06-07 13:04:12,208 ] 
+    [ 2022-06-07 13:04:12,208 ] Finish training!
+    [ 2022-06-07 13:04:12,208 ] 
  
 
 x-sub:
@@ -143,17 +146,18 @@ x-sub:
 
 x-view 预测结果:
     
-    INFO 2022-06-06 12:22:45,003 initializer.py:23] Successful!
-    INFO 2022-06-06 12:22:45,003 initializer.py:24]
-    INFO 2022-06-06 12:22:45,003 processor.py:97] Loading evaluating model ...
-    INFO 2022-06-06 12:22:45,048 processor.py:102] Successful!
-    INFO 2022-06-06 12:22:45,048 processor.py:103]
-    INFO 2022-06-06 12:22:45,048 processor.py:106] Starting evaluating ...
-    100%|███████████████████████████████████████████████████████████████████████████████████████████████████| 1183/1183 [02:12<00:00,  8.96it/s]
-    INFO 2022-06-06 12:24:57,131 processor.py:78] Top-1 accuracy: 17948/18928(94.82%), Top-5 accuracy: 18785/18928(99.24%), Mean loss:0.1830
-    INFO 2022-06-06 12:24:57,131 processor.py:81] Evaluating time: 132.08s, Speed: 143.31 sequnces/(second*GPU)
-    INFO 2022-06-06 12:24:57,131 processor.py:84]
-    INFO 2022-06-06 12:24:57,131 processor.py:108] Finish evaluating!
+    [ 2022-06-07 13:06:03,864 ] Loss function: CrossEntropyLoss
+    [ 2022-06-07 13:06:03,865 ] Successful!
+    [ 2022-06-07 13:06:03,865 ] 
+    [ 2022-06-07 13:06:03,865 ] Loading evaluating model ...
+    [ 2022-06-07 13:06:03,917 ] Successful!
+    [ 2022-06-07 13:06:03,917 ] 
+    [ 2022-06-07 13:06:03,917 ] Starting evaluating ...
+    100%|███████████████████████████████████████████████████████████████████████████████████████████████| 1183/1183 [02:19<00:00,  8.45it/s]
+    [ 2022-06-07 13:08:23,872 ] Top-1 accuracy: 17964/18928(94.91%), Top-5 accuracy: 18791/18928(99.28%), Mean loss:0.1766
+    [ 2022-06-07 13:08:23,872 ] Evaluating time: 139.95s, Speed: 135.25 sequnces/(second*GPU)
+    [ 2022-06-07 13:08:23,873 ] 
+    [ 2022-06-07 13:08:23,873 ] Finish evaluating!
 
 
 
