@@ -305,6 +305,15 @@ x-sub 预测结果:
       doi       = {10.1145/3394171.3413802},
     }
 * [PaddlePaddle](https://github.com/paddlepaddle/paddle)
+* 相关信息
+| 信息     | 描述                                                         |
+| -------- | ------------------------------------------------------------ |
+| 作者     | [Wuxiao85](https://github.com/Wuxiao85)[winnie-nqw](https://github.com/winnie-nqw)|
+| 日期     | 2022年6月                                                    |
+| 框架版本 | PaddlePaddle==2.2.0                                          |
+| 应用场景 | 骨架动作识别                                                 |
+| 硬件支持 | GPU, CPU                                                     |
+| AIStudio地址 | [Notebook](https://aistudio.baidu.com/aistudio/projectdetail/4010481?shared=1) |
 
 感谢飞桨提供的算力和支持。
 
