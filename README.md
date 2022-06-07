@@ -194,6 +194,7 @@ x-sub 预测结果:
     │  │  │─transformer.py
     ├─scheduler # 学习率变化
     │  │  │─lr_schedulers.py 
+    ├─test_tipc # tipc测试组件
     ├─generator.py
     ├─infer.py # 模型推理
     ├─initializer.py
