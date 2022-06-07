@@ -32,7 +32,7 @@
 测试单项功能仅需两行命令，**如需测试不同模型/功能，替换配置文件即可**，命令格式如下：
 ```shell
 # 功能：准备数据
-# 格式：bash + 运行脚本 + 参数1: 配置文件选择 + 参数2: 模式选择
+# 格式：bash + 运行脚本 + 参数1: 源数据目录 + 参数2: 保存路径 + 参数3： 生成训练数据/验证集
 bash test_tipc/prepare.sh [source_file_directory] [save_directory] [train/eval]
 # 功能：运行测试
 # 格式：bash + 运行脚本 + 参数1: 配置文件选择 + 参数2: 模式选择
@@ -42,7 +42,7 @@ bash test_tipc/test_train_inference_python.sh configs/[model_name]/[params_file_
 以下为示例：
 ```shell
 # 功能：准备数据
-# 格式：bash + 运行脚本 + 参数1: 配置文件选择 + 参数2: 模式选择
+# 格式：bash + 运行脚本 + 参数1: 源数据目录 + 参数2: 保存路径 + 参数3： 生成训练数据/验证集
 bash test_tipc/prepare.sh ./data/npy_dataset ./data/ntu/tiny_dataset train
 # 功能：运行测试
 # 格式：bash + 运行脚本 + 参数1: 配置文件选择 + 参数2: 模式选择
