@@ -21,8 +21,8 @@ dataset_args:
     inputs: JVB
     transform: False
     root_folder: ./data/npy_dataset
-    ntu60_path: /data1/wushaoxiang/new/GCN_Trans/data/nturgb+d_skeletons60
-    ntu120_path: /data1/wushaoxiang/new/GCN_Trans/data/nturgb+d_skeletons120
+    ntu60_path: ./data/nturgb+d_skeletons60
+    ntu120_path: ./data/nturgb+d_skeletons120
 
 # Model
 model_type: EfficientGCN-B0
