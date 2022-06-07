@@ -306,5 +306,5 @@ x-sub 预测结果:
     }
 * [PaddlePaddle](https://github.com/paddlepaddle/paddle)
 
-感谢飞浆提供的算力和支持。
+感谢飞桨提供的算力和支持。
 
