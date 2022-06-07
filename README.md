@@ -250,13 +250,13 @@ x-sub 预测结果:
 **静态模型推理**
 运行
 
-    python infer.py --model_file <path to pdmodel> --params_file <path to pdiparams> --save_dir <directory to save tiny dataset> --b <batch_size>
+    python infer.py --model_file <path to pdmodel> --params_file <path to pdiparams> --data_file <path to tiny eval data> --label_file <path to tiny eval label>
 
 静态推理时用到的batchsize需要与 config 文件中 test_batch_size 一致。
 
 以下用xsub数据集上训练的模型示范静态推理过程。
 
-    python infer.py --model_file xsub.pdmodel --params_file xsub.pdimodel --save_dir ./dataset/ntu --b <batch_size>
+    python infer.py --model_file ./pretrain_model/xsub.pdmodel --params_file ./pretrain_model/xsub.pdiparams --data_file ./data/ntu/tiny_dataset/original/ntu-xsub/eval_data.npy --label_file ./data/ntu/tiny_dataset/original/ntu-xsub/eval_label.pkl
 
 输出结果如下：
 
